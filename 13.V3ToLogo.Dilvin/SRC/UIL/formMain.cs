@@ -98,19 +98,6 @@ namespace V3ToLogo.UIL
             Application.DoEvents();
         }
 
-        private string GetStartDate()
-        {
-            if (checkBox1.Checked)
-                return GeneralBussines.FormatDate(dtStart.Value);
-            else return "";
-        }
-        private string GetEndDate()
-        {
-            if (checkBox2.Checked)
-                return GeneralBussines.FormatDate(dtEnd.Value);
-            else return "";
-        }
-
         private string GetFormattedDate(CheckBox checkBox, DateTimePicker dateTimePicker)
         {
             if (checkBox.Checked)
@@ -276,13 +263,6 @@ namespace V3ToLogo.UIL
                 MessageBox.Show(ex.Message);
             }
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            formSettings frm = new formSettings();
-            frm.ShowDialog();
-            frm.Dispose();
-        }
-
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             dtEnd.Enabled = checkBox2.Checked;
@@ -323,9 +303,5 @@ namespace V3ToLogo.UIL
             }
         }
 
-        private void btnStokGetData_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

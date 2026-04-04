@@ -38,6 +38,9 @@ namespace V3ToLogo.UIL
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.spIvmeProductListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.label_malzeme_success = new System.Windows.Forms.Label();
             this.label_malzeme_error = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,6 +48,9 @@ namespace V3ToLogo.UIL
             this.tabPageCariHesap = new System.Windows.Forms.TabPage();
             this.dgvCariHesap = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.eFilterCariHesap = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label_cari_error = new System.Windows.Forms.Label();
@@ -52,6 +58,15 @@ namespace V3ToLogo.UIL
             this.tabPageFaturaBP = new System.Windows.Forms.TabPage();
             this.dgvFaturaBP = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.dt1_2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.dt1_1 = new System.Windows.Forms.DateTimePicker();
+            this.button12 = new System.Windows.Forms.Button();
             this.eFilterFaturaBP = new System.Windows.Forms.TextBox();
             this.label_faturaBP_success = new System.Windows.Forms.Label();
             this.label_faturaBP_error = new System.Windows.Forms.Label();
@@ -59,6 +74,15 @@ namespace V3ToLogo.UIL
             this.tabPageFaturaR = new System.Windows.Forms.TabPage();
             this.dgvFaturaR = new System.Windows.Forms.DataGridView();
             this.panelFaturaR = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.dt2_2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.dt2_1 = new System.Windows.Forms.DateTimePicker();
+            this.button13 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label_faturaR_success = new System.Windows.Forms.Label();
             this.label_faturaR_error = new System.Windows.Forms.Label();
@@ -66,17 +90,63 @@ namespace V3ToLogo.UIL
             this.tabPageFaturaWS = new System.Windows.Forms.TabPage();
             this.dgvFaturaWS = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.dt3_2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.dt3_1 = new System.Windows.Forms.DateTimePicker();
+            this.button14 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.eFilterFaturaWS = new System.Windows.Forms.TextBox();
             this.label_faturaWS_success = new System.Windows.Forms.Label();
             this.label_faturaWS_error = new System.Windows.Forms.Label();
             this.tabPageAlisMasraf = new System.Windows.Forms.TabPage();
             this.dgvAlisMasraf = new System.Windows.Forms.DataGridView();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.dt4_2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.dt4_1 = new System.Windows.Forms.DateTimePicker();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPageSatisMasraf = new System.Windows.Forms.TabPage();
             this.dgvSatisMasraf = new System.Windows.Forms.DataGridView();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.dt5_2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.dt5_1 = new System.Windows.Forms.DateTimePicker();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabPageGelenHavale = new System.Windows.Forms.TabPage();
             this.dgvGelenHavale = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.dt6_2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.dt6_1 = new System.Windows.Forms.DateTimePicker();
+            this.button19 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label_gelenhavale_error = new System.Windows.Forms.Label();
             this.label_gelenhavale_success = new System.Windows.Forms.Label();
@@ -84,6 +154,15 @@ namespace V3ToLogo.UIL
             this.tabPageGonderilenHavale = new System.Windows.Forms.TabPage();
             this.dgvGonderilenHavale = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.dt7_2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.dt7_1 = new System.Windows.Forms.DateTimePicker();
+            this.button20 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.eFilterBankaGonderilenHavale = new System.Windows.Forms.TextBox();
             this.label_gonderilenhavale_success = new System.Windows.Forms.Label();
@@ -91,8 +170,16 @@ namespace V3ToLogo.UIL
             this.tabPageKrediKarti = new System.Windows.Forms.TabPage();
             this.dgvKrediKarti = new System.Windows.Forms.DataGridView();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.dt8_2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.dt8_1 = new System.Windows.Forms.DateTimePicker();
+            this.button21 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.cbKrediKartiFisi = new System.Windows.Forms.CheckBox();
             this.eFilterKrediKartiFisi = new System.Windows.Forms.TextBox();
             this.label_kredikarti_success = new System.Windows.Forms.Label();
             this.label_kredikarti_error = new System.Windows.Forms.Label();
@@ -107,94 +194,6 @@ namespace V3ToLogo.UIL
             this.buttonStop = new System.Windows.Forms.Button();
             this.buttonTimerList = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.dt1_2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.dt1_1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.dt2_2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.dt2_1 = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.dt3_2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.dt3_1 = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.dt4_2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.dt4_1 = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.dt5_2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.dt5_1 = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.dt6_2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.dt6_1 = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.dt7_2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.dt7_1 = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.dt8_2 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.dt8_1 = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageStok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -212,10 +211,12 @@ namespace V3ToLogo.UIL
             this.tabPageFaturaWS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaturaWS)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlisMasraf)).BeginInit();
             this.tabPageAlisMasraf.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSatisMasraf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlisMasraf)).BeginInit();
+            this.panel9.SuspendLayout();
             this.tabPageSatisMasraf.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSatisMasraf)).BeginInit();
+            this.panel10.SuspendLayout();
             this.tabPageGelenHavale.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGelenHavale)).BeginInit();
             this.panel6.SuspendLayout();
@@ -228,8 +229,6 @@ namespace V3ToLogo.UIL
             this.tabPageAyarlar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerMain
@@ -276,7 +275,7 @@ namespace V3ToLogo.UIL
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.spIvmeProductListBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -299,6 +298,39 @@ namespace V3ToLogo.UIL
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1089, 100);
             this.panel2.TabIndex = 33;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(600, 20);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 13);
+            this.label17.TabIndex = 56;
+            this.label17.Text = "Aktarılamayan";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(460, 20);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(94, 13);
+            this.label18.TabIndex = 55;
+            this.label18.Text = "Toplam / Aktarılan";
+            // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button10.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button10.Location = new System.Drawing.Point(0, 0);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(173, 100);
+            this.button10.TabIndex = 38;
+            this.button10.Text = "Aktarımı Başlat";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.ButtonRunClick);
             // 
             // label_malzeme_success
             // 
@@ -378,6 +410,39 @@ namespace V3ToLogo.UIL
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1089, 100);
             this.panel3.TabIndex = 0;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(600, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 13);
+            this.label15.TabIndex = 56;
+            this.label15.Text = "Aktarılamayan";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(460, 20);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(94, 13);
+            this.label16.TabIndex = 55;
+            this.label16.Text = "Toplam / Aktarılan";
+            // 
+            // button11
+            // 
+            this.button11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button11.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button11.Location = new System.Drawing.Point(0, 0);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(173, 100);
+            this.button11.TabIndex = 45;
+            this.button11.Text = "Aktarımı Başlat";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.ButtonRunClick);
             // 
             // eFilterCariHesap
             // 
@@ -464,6 +529,96 @@ namespace V3ToLogo.UIL
             this.panel4.Size = new System.Drawing.Size(1089, 100);
             this.panel4.TabIndex = 0;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(600, 20);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(73, 13);
+            this.label14.TabIndex = 54;
+            this.label14.Text = "Aktarılamayan";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(460, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(94, 13);
+            this.label13.TabIndex = 53;
+            this.label13.Text = "Toplam / Aktarılan";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Fiş No";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(77, 64);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(172, 20);
+            this.textBox3.TabIndex = 51;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(9, 36);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(45, 17);
+            this.checkBox3.TabIndex = 50;
+            this.checkBox3.Text = "Bitiş";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // dt1_2
+            // 
+            this.dt1_2.Location = new System.Drawing.Point(77, 38);
+            this.dt1_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt1_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt1_2.Name = "dt1_2";
+            this.dt1_2.Size = new System.Drawing.Size(172, 20);
+            this.dt1_2.TabIndex = 49;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(9, 13);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(66, 17);
+            this.checkBox4.TabIndex = 48;
+            this.checkBox4.Text = "Başlama";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // dt1_1
+            // 
+            this.dt1_1.Location = new System.Drawing.Point(77, 12);
+            this.dt1_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt1_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt1_1.Name = "dt1_1";
+            this.dt1_1.Size = new System.Drawing.Size(172, 20);
+            this.dt1_1.TabIndex = 47;
+            // 
+            // button12
+            // 
+            this.button12.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button12.Location = new System.Drawing.Point(266, 0);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(173, 100);
+            this.button12.TabIndex = 46;
+            this.button12.Text = "Aktarımı Başlat";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.ButtonRunClick);
+            // 
             // eFilterFaturaBP
             // 
             this.eFilterFaturaBP.Location = new System.Drawing.Point(728, 9);
@@ -548,6 +703,96 @@ namespace V3ToLogo.UIL
             this.panelFaturaR.Name = "panelFaturaR";
             this.panelFaturaR.Size = new System.Drawing.Size(1089, 100);
             this.panelFaturaR.TabIndex = 50;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(600, 20);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(73, 13);
+            this.label19.TabIndex = 60;
+            this.label19.Text = "Aktarılamayan";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(460, 20);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(94, 13);
+            this.label20.TabIndex = 59;
+            this.label20.Text = "Toplam / Aktarılan";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(2, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "Fiş No";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(73, 67);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(172, 20);
+            this.textBox4.TabIndex = 57;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Location = new System.Drawing.Point(5, 39);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(45, 17);
+            this.checkBox5.TabIndex = 56;
+            this.checkBox5.Text = "Bitiş";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // dt2_2
+            // 
+            this.dt2_2.Location = new System.Drawing.Point(73, 41);
+            this.dt2_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt2_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt2_2.Name = "dt2_2";
+            this.dt2_2.Size = new System.Drawing.Size(172, 20);
+            this.dt2_2.TabIndex = 55;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.Location = new System.Drawing.Point(5, 16);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(66, 17);
+            this.checkBox6.TabIndex = 54;
+            this.checkBox6.Text = "Başlama";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // dt2_1
+            // 
+            this.dt2_1.Location = new System.Drawing.Point(73, 15);
+            this.dt2_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt2_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt2_1.Name = "dt2_1";
+            this.dt2_1.Size = new System.Drawing.Size(172, 20);
+            this.dt2_1.TabIndex = 53;
+            // 
+            // button13
+            // 
+            this.button13.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button13.Location = new System.Drawing.Point(250, 0);
+            this.button13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(173, 100);
+            this.button13.TabIndex = 47;
+            this.button13.Text = "Aktarımı Başlat";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.ButtonRunClick);
             // 
             // button6
             // 
@@ -634,6 +879,96 @@ namespace V3ToLogo.UIL
             this.panel5.Size = new System.Drawing.Size(1089, 100);
             this.panel5.TabIndex = 0;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(600, 20);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(73, 13);
+            this.label21.TabIndex = 66;
+            this.label21.Text = "Aktarılamayan";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(460, 20);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(94, 13);
+            this.label22.TabIndex = 65;
+            this.label22.Text = "Toplam / Aktarılan";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 70);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 64;
+            this.label7.Text = "Fiş No";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(74, 70);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(172, 20);
+            this.textBox5.TabIndex = 63;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Checked = true;
+            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox7.Location = new System.Drawing.Point(6, 42);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(45, 17);
+            this.checkBox7.TabIndex = 62;
+            this.checkBox7.Text = "Bitiş";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // dt3_2
+            // 
+            this.dt3_2.Location = new System.Drawing.Point(74, 44);
+            this.dt3_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt3_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt3_2.Name = "dt3_2";
+            this.dt3_2.Size = new System.Drawing.Size(172, 20);
+            this.dt3_2.TabIndex = 61;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Checked = true;
+            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox8.Location = new System.Drawing.Point(6, 19);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(66, 17);
+            this.checkBox8.TabIndex = 60;
+            this.checkBox8.Text = "Başlama";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // dt3_1
+            // 
+            this.dt3_1.Location = new System.Drawing.Point(74, 18);
+            this.dt3_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt3_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt3_1.Name = "dt3_1";
+            this.dt3_1.Size = new System.Drawing.Size(172, 20);
+            this.dt3_1.TabIndex = 59;
+            // 
+            // button14
+            // 
+            this.button14.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button14.Location = new System.Drawing.Point(251, 0);
+            this.button14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(173, 100);
+            this.button14.TabIndex = 47;
+            this.button14.Text = "Aktarımı Başlat";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.ButtonRunClick);
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(1018, 47);
@@ -673,9 +1008,9 @@ namespace V3ToLogo.UIL
             this.label_faturaWS_error.TabIndex = 36;
             this.label_faturaWS_error.Text = "0";
             this.label_faturaWS_error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            //
+            // 
             // tabPageAlisMasraf
-            //
+            // 
             this.tabPageAlisMasraf.Controls.Add(this.dgvAlisMasraf);
             this.tabPageAlisMasraf.Controls.Add(this.panel9);
             this.tabPageAlisMasraf.Location = new System.Drawing.Point(4, 22);
@@ -685,9 +1020,172 @@ namespace V3ToLogo.UIL
             this.tabPageAlisMasraf.TabIndex = 6;
             this.tabPageAlisMasraf.Text = "Alış Masraf Faturaları";
             this.tabPageAlisMasraf.UseVisualStyleBackColor = true;
-            //
+            // 
+            // dgvAlisMasraf
+            // 
+            this.dgvAlisMasraf.AllowUserToAddRows = false;
+            this.dgvAlisMasraf.AllowUserToDeleteRows = false;
+            this.dgvAlisMasraf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlisMasraf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAlisMasraf.Location = new System.Drawing.Point(3, 103);
+            this.dgvAlisMasraf.Name = "dgvAlisMasraf";
+            this.dgvAlisMasraf.ReadOnly = true;
+            this.dgvAlisMasraf.Size = new System.Drawing.Size(1089, 501);
+            this.dgvAlisMasraf.TabIndex = 50;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label23);
+            this.panel9.Controls.Add(this.label24);
+            this.panel9.Controls.Add(this.label8);
+            this.panel9.Controls.Add(this.textBox6);
+            this.panel9.Controls.Add(this.checkBox9);
+            this.panel9.Controls.Add(this.dt4_2);
+            this.panel9.Controls.Add(this.checkBox10);
+            this.panel9.Controls.Add(this.dt4_1);
+            this.panel9.Controls.Add(this.button15);
+            this.panel9.Controls.Add(this.button16);
+            this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.label1);
+            this.panel9.Controls.Add(this.label2);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1089, 100);
+            this.panel9.TabIndex = 1;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(600, 20);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(73, 13);
+            this.label23.TabIndex = 66;
+            this.label23.Text = "Aktarılamayan";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(460, 20);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(94, 13);
+            this.label24.TabIndex = 65;
+            this.label24.Text = "Toplam / Aktarılan";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(2, 69);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 64;
+            this.label8.Text = "Fiş No";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(73, 69);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(172, 20);
+            this.textBox6.TabIndex = 63;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Checked = true;
+            this.checkBox9.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox9.Location = new System.Drawing.Point(5, 41);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(45, 17);
+            this.checkBox9.TabIndex = 62;
+            this.checkBox9.Text = "Bitiş";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // dt4_2
+            // 
+            this.dt4_2.Location = new System.Drawing.Point(73, 43);
+            this.dt4_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt4_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt4_2.Name = "dt4_2";
+            this.dt4_2.Size = new System.Drawing.Size(172, 20);
+            this.dt4_2.TabIndex = 61;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Checked = true;
+            this.checkBox10.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox10.Location = new System.Drawing.Point(5, 18);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(66, 17);
+            this.checkBox10.TabIndex = 60;
+            this.checkBox10.Text = "Başlama";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // dt4_1
+            // 
+            this.dt4_1.Location = new System.Drawing.Point(73, 17);
+            this.dt4_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt4_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt4_1.Name = "dt4_1";
+            this.dt4_1.Size = new System.Drawing.Size(172, 20);
+            this.dt4_1.TabIndex = 59;
+            // 
+            // button15
+            // 
+            this.button15.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button15.Location = new System.Drawing.Point(250, 0);
+            this.button15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(173, 100);
+            this.button15.TabIndex = 47;
+            this.button15.Text = "Aktarımı Başlat";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.ButtonRunClick);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(1004, 43);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(57, 23);
+            this.button16.TabIndex = 34;
+            this.button16.Text = "log sil";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(819, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(242, 20);
+            this.textBox1.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(640, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 16);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(500, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 16);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "0";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tabPageSatisMasraf
-            //
+            // 
             this.tabPageSatisMasraf.Controls.Add(this.dgvSatisMasraf);
             this.tabPageSatisMasraf.Controls.Add(this.panel10);
             this.tabPageSatisMasraf.Location = new System.Drawing.Point(4, 22);
@@ -697,6 +1195,169 @@ namespace V3ToLogo.UIL
             this.tabPageSatisMasraf.TabIndex = 7;
             this.tabPageSatisMasraf.Text = "Satış Masraf Faturaları";
             this.tabPageSatisMasraf.UseVisualStyleBackColor = true;
+            // 
+            // dgvSatisMasraf
+            // 
+            this.dgvSatisMasraf.AllowUserToAddRows = false;
+            this.dgvSatisMasraf.AllowUserToDeleteRows = false;
+            this.dgvSatisMasraf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSatisMasraf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSatisMasraf.Location = new System.Drawing.Point(3, 103);
+            this.dgvSatisMasraf.Name = "dgvSatisMasraf";
+            this.dgvSatisMasraf.ReadOnly = true;
+            this.dgvSatisMasraf.Size = new System.Drawing.Size(1089, 501);
+            this.dgvSatisMasraf.TabIndex = 50;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label25);
+            this.panel10.Controls.Add(this.label26);
+            this.panel10.Controls.Add(this.label9);
+            this.panel10.Controls.Add(this.textBox7);
+            this.panel10.Controls.Add(this.checkBox11);
+            this.panel10.Controls.Add(this.dt5_2);
+            this.panel10.Controls.Add(this.checkBox12);
+            this.panel10.Controls.Add(this.dt5_1);
+            this.panel10.Controls.Add(this.button17);
+            this.panel10.Controls.Add(this.button18);
+            this.panel10.Controls.Add(this.textBox2);
+            this.panel10.Controls.Add(this.label3);
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(3, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1089, 100);
+            this.panel10.TabIndex = 1;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(600, 20);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(73, 13);
+            this.label25.TabIndex = 66;
+            this.label25.Text = "Aktarılamayan";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(460, 20);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(94, 13);
+            this.label26.TabIndex = 65;
+            this.label26.Text = "Toplam / Aktarılan";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(5, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Fiş No";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(76, 66);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(172, 20);
+            this.textBox7.TabIndex = 63;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.Checked = true;
+            this.checkBox11.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox11.Location = new System.Drawing.Point(8, 38);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(45, 17);
+            this.checkBox11.TabIndex = 62;
+            this.checkBox11.Text = "Bitiş";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // dt5_2
+            // 
+            this.dt5_2.Location = new System.Drawing.Point(76, 40);
+            this.dt5_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt5_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt5_2.Name = "dt5_2";
+            this.dt5_2.Size = new System.Drawing.Size(172, 20);
+            this.dt5_2.TabIndex = 61;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Checked = true;
+            this.checkBox12.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox12.Location = new System.Drawing.Point(8, 15);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(66, 17);
+            this.checkBox12.TabIndex = 60;
+            this.checkBox12.Text = "Başlama";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // dt5_1
+            // 
+            this.dt5_1.Location = new System.Drawing.Point(76, 14);
+            this.dt5_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt5_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt5_1.Name = "dt5_1";
+            this.dt5_1.Size = new System.Drawing.Size(172, 20);
+            this.dt5_1.TabIndex = 59;
+            // 
+            // button17
+            // 
+            this.button17.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button17.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button17.Location = new System.Drawing.Point(253, 0);
+            this.button17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(173, 100);
+            this.button17.TabIndex = 47;
+            this.button17.Text = "Aktarımı Başlat";
+            this.button17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.ButtonRunClick);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(1015, 42);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(57, 23);
+            this.button18.TabIndex = 34;
+            this.button18.Text = "log sil";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(830, 16);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(242, 20);
+            this.textBox2.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(640, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 16);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "0";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(500, 40);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(15, 16);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "0";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPageGelenHavale
             // 
@@ -742,6 +1403,96 @@ namespace V3ToLogo.UIL
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1089, 100);
             this.panel6.TabIndex = 0;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(600, 20);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(73, 13);
+            this.label27.TabIndex = 66;
+            this.label27.Text = "Aktarılamayan";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(460, 20);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(94, 13);
+            this.label28.TabIndex = 65;
+            this.label28.Text = "Toplam / Aktarılan";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(2, 65);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "Fiş No";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(73, 65);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(172, 20);
+            this.textBox8.TabIndex = 63;
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.Checked = true;
+            this.checkBox13.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox13.Location = new System.Drawing.Point(5, 37);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(45, 17);
+            this.checkBox13.TabIndex = 62;
+            this.checkBox13.Text = "Bitiş";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // dt6_2
+            // 
+            this.dt6_2.Location = new System.Drawing.Point(73, 39);
+            this.dt6_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt6_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt6_2.Name = "dt6_2";
+            this.dt6_2.Size = new System.Drawing.Size(172, 20);
+            this.dt6_2.TabIndex = 61;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.Checked = true;
+            this.checkBox14.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox14.Location = new System.Drawing.Point(5, 14);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(66, 17);
+            this.checkBox14.TabIndex = 60;
+            this.checkBox14.Text = "Başlama";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            // 
+            // dt6_1
+            // 
+            this.dt6_1.Location = new System.Drawing.Point(73, 13);
+            this.dt6_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt6_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt6_1.Name = "dt6_1";
+            this.dt6_1.Size = new System.Drawing.Size(172, 20);
+            this.dt6_1.TabIndex = 59;
+            // 
+            // button19
+            // 
+            this.button19.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button19.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button19.Location = new System.Drawing.Point(250, 0);
+            this.button19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(173, 100);
+            this.button19.TabIndex = 48;
+            this.button19.Text = "Aktarımı Başlat";
+            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.ButtonRunClick);
             // 
             // button7
             // 
@@ -828,6 +1579,96 @@ namespace V3ToLogo.UIL
             this.panel7.Size = new System.Drawing.Size(1089, 100);
             this.panel7.TabIndex = 0;
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(600, 20);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(73, 13);
+            this.label29.TabIndex = 66;
+            this.label29.Text = "Aktarılamayan";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(460, 20);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(94, 13);
+            this.label30.TabIndex = 65;
+            this.label30.Text = "Toplam / Aktarılan";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(10, 64);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 13);
+            this.label11.TabIndex = 64;
+            this.label11.Text = "Fiş No";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(81, 64);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(172, 20);
+            this.textBox9.TabIndex = 63;
+            // 
+            // checkBox15
+            // 
+            this.checkBox15.AutoSize = true;
+            this.checkBox15.Checked = true;
+            this.checkBox15.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox15.Location = new System.Drawing.Point(13, 36);
+            this.checkBox15.Name = "checkBox15";
+            this.checkBox15.Size = new System.Drawing.Size(45, 17);
+            this.checkBox15.TabIndex = 62;
+            this.checkBox15.Text = "Bitiş";
+            this.checkBox15.UseVisualStyleBackColor = true;
+            // 
+            // dt7_2
+            // 
+            this.dt7_2.Location = new System.Drawing.Point(81, 38);
+            this.dt7_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt7_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt7_2.Name = "dt7_2";
+            this.dt7_2.Size = new System.Drawing.Size(172, 20);
+            this.dt7_2.TabIndex = 61;
+            // 
+            // checkBox16
+            // 
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.Checked = true;
+            this.checkBox16.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox16.Location = new System.Drawing.Point(13, 13);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(66, 17);
+            this.checkBox16.TabIndex = 60;
+            this.checkBox16.Text = "Başlama";
+            this.checkBox16.UseVisualStyleBackColor = true;
+            // 
+            // dt7_1
+            // 
+            this.dt7_1.Location = new System.Drawing.Point(81, 12);
+            this.dt7_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt7_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt7_1.Name = "dt7_1";
+            this.dt7_1.Size = new System.Drawing.Size(172, 20);
+            this.dt7_1.TabIndex = 59;
+            // 
+            // button20
+            // 
+            this.button20.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button20.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button20.Location = new System.Drawing.Point(258, 0);
+            this.button20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(173, 100);
+            this.button20.TabIndex = 48;
+            this.button20.Text = "Aktarımı Başlat";
+            this.button20.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.ButtonRunClick);
+            // 
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(1010, 54);
@@ -904,7 +1745,6 @@ namespace V3ToLogo.UIL
             this.panel8.Controls.Add(this.dt8_1);
             this.panel8.Controls.Add(this.button21);
             this.panel8.Controls.Add(this.button9);
-            this.panel8.Controls.Add(this.cbKrediKartiFisi);
             this.panel8.Controls.Add(this.eFilterKrediKartiFisi);
             this.panel8.Controls.Add(this.label_kredikarti_success);
             this.panel8.Controls.Add(this.label_kredikarti_error);
@@ -914,6 +1754,96 @@ namespace V3ToLogo.UIL
             this.panel8.Size = new System.Drawing.Size(1089, 100);
             this.panel8.TabIndex = 0;
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(600, 20);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(73, 13);
+            this.label31.TabIndex = 66;
+            this.label31.Text = "Aktarılamayan";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(460, 20);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(94, 13);
+            this.label32.TabIndex = 65;
+            this.label32.Text = "Toplam / Aktarılan";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(5, 66);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.TabIndex = 64;
+            this.label12.Text = "Fiş No";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(76, 66);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(172, 20);
+            this.textBox10.TabIndex = 63;
+            // 
+            // checkBox17
+            // 
+            this.checkBox17.AutoSize = true;
+            this.checkBox17.Checked = true;
+            this.checkBox17.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox17.Location = new System.Drawing.Point(8, 38);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(45, 17);
+            this.checkBox17.TabIndex = 62;
+            this.checkBox17.Text = "Bitiş";
+            this.checkBox17.UseVisualStyleBackColor = true;
+            // 
+            // dt8_2
+            // 
+            this.dt8_2.Location = new System.Drawing.Point(76, 40);
+            this.dt8_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt8_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt8_2.Name = "dt8_2";
+            this.dt8_2.Size = new System.Drawing.Size(172, 20);
+            this.dt8_2.TabIndex = 61;
+            // 
+            // checkBox18
+            // 
+            this.checkBox18.AutoSize = true;
+            this.checkBox18.Checked = true;
+            this.checkBox18.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox18.Location = new System.Drawing.Point(8, 15);
+            this.checkBox18.Name = "checkBox18";
+            this.checkBox18.Size = new System.Drawing.Size(66, 17);
+            this.checkBox18.TabIndex = 60;
+            this.checkBox18.Text = "Başlama";
+            this.checkBox18.UseVisualStyleBackColor = true;
+            // 
+            // dt8_1
+            // 
+            this.dt8_1.Location = new System.Drawing.Point(76, 14);
+            this.dt8_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dt8_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dt8_1.Name = "dt8_1";
+            this.dt8_1.Size = new System.Drawing.Size(172, 20);
+            this.dt8_1.TabIndex = 59;
+            // 
+            // button21
+            // 
+            this.button21.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button21.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button21.Location = new System.Drawing.Point(253, 0);
+            this.button21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(173, 100);
+            this.button21.TabIndex = 49;
+            this.button21.Text = "Aktarımı Başlat";
+            this.button21.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.ButtonRunClick);
+            // 
             // button9
             // 
             this.button9.Location = new System.Drawing.Point(1027, 7);
@@ -922,16 +1852,6 @@ namespace V3ToLogo.UIL
             this.button9.TabIndex = 42;
             this.button9.Text = "log sil";
             this.button9.UseVisualStyleBackColor = true;
-            // 
-            // cbKrediKartiFisi
-            // 
-            this.cbKrediKartiFisi.AutoSize = true;
-            this.cbKrediKartiFisi.Location = new System.Drawing.Point(700, 9);
-            this.cbKrediKartiFisi.Name = "cbKrediKartiFisi";
-            this.cbKrediKartiFisi.Size = new System.Drawing.Size(92, 17);
-            this.cbKrediKartiFisi.TabIndex = 43;
-            this.cbKrediKartiFisi.Text = "Kredi Kartı Fişi";
-            this.cbKrediKartiFisi.UseVisualStyleBackColor = true;
             // 
             // eFilterKrediKartiFisi
             // 
@@ -1112,938 +2032,6 @@ namespace V3ToLogo.UIL
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
-            // button10
-            // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button10.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(173, 100);
-            this.button10.TabIndex = 38;
-            this.button10.Text = "Aktarımı Başlat";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button11.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button11.Location = new System.Drawing.Point(0, 0);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(173, 100);
-            this.button11.TabIndex = 45;
-            this.button11.Text = "Aktarımı Başlat";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // button12
-            // 
-            this.button12.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button12.Location = new System.Drawing.Point(266, 0);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(173, 100);
-            this.button12.TabIndex = 46;
-            this.button12.Text = "Aktarımı Başlat";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // button13
-            // 
-            this.button13.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button13.Location = new System.Drawing.Point(250, 0);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(173, 100);
-            this.button13.TabIndex = 47;
-            this.button13.Text = "Aktarımı Başlat";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // button14
-            // 
-            this.button14.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button14.Location = new System.Drawing.Point(251, 0);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(173, 100);
-            this.button14.TabIndex = 47;
-            this.button14.Text = "Aktarımı Başlat";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label23);
-            this.panel9.Controls.Add(this.label24);
-            this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.textBox6);
-            this.panel9.Controls.Add(this.checkBox9);
-            this.panel9.Controls.Add(this.dt4_2);
-            this.panel9.Controls.Add(this.checkBox10);
-            this.panel9.Controls.Add(this.dt4_1);
-            this.panel9.Controls.Add(this.button15);
-            this.panel9.Controls.Add(this.button16);
-            this.panel9.Controls.Add(this.textBox1);
-            this.panel9.Controls.Add(this.label1);
-            this.panel9.Controls.Add(this.label2);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(3, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1089, 100);
-            this.panel9.TabIndex = 1;
-            // 
-            // button15
-            // 
-            this.button15.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button15.Location = new System.Drawing.Point(250, 0);
-            this.button15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(173, 100);
-            this.button15.TabIndex = 47;
-            this.button15.Text = "Aktarımı Başlat";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(1004, 43);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(57, 23);
-            this.button16.TabIndex = 34;
-            this.button16.Text = "log sil";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(819, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 20);
-            this.textBox1.TabIndex = 38;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(640, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 16);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(500, 40);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 16);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "0";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label25);
-            this.panel10.Controls.Add(this.label26);
-            this.panel10.Controls.Add(this.label9);
-            this.panel10.Controls.Add(this.textBox7);
-            this.panel10.Controls.Add(this.checkBox11);
-            this.panel10.Controls.Add(this.dt5_2);
-            this.panel10.Controls.Add(this.checkBox12);
-            this.panel10.Controls.Add(this.dt5_1);
-            this.panel10.Controls.Add(this.button17);
-            this.panel10.Controls.Add(this.button18);
-            this.panel10.Controls.Add(this.textBox2);
-            this.panel10.Controls.Add(this.label3);
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(3, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1089, 100);
-            this.panel10.TabIndex = 1;
-            // 
-            // button17
-            // 
-            this.button17.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button17.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button17.Location = new System.Drawing.Point(253, 0);
-            this.button17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(173, 100);
-            this.button17.TabIndex = 47;
-            this.button17.Text = "Aktarımı Başlat";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(1015, 42);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(57, 23);
-            this.button18.TabIndex = 34;
-            this.button18.Text = "log sil";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(830, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 20);
-            this.textBox2.TabIndex = 38;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(640, 40);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 16);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "0";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(500, 40);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 16);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "0";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button19
-            // 
-            this.button19.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button19.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button19.Location = new System.Drawing.Point(250, 0);
-            this.button19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(173, 100);
-            this.button19.TabIndex = 48;
-            this.button19.Text = "Aktarımı Başlat";
-            this.button19.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // button20
-            // 
-            this.button20.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button20.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button20.Location = new System.Drawing.Point(258, 0);
-            this.button20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(173, 100);
-            this.button20.TabIndex = 48;
-            this.button20.Text = "Aktarımı Başlat";
-            this.button20.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.ButtonRunClick);
-            //
-            // button21
-            // 
-            this.button21.Image = global::V3ToLogo.Properties.Resources.control_play;
-            this.button21.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button21.Location = new System.Drawing.Point(253, 0);
-            this.button21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(173, 100);
-            this.button21.TabIndex = 49;
-            this.button21.Text = "Aktarımı Başlat";
-            this.button21.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.ButtonRunClick);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(9, 36);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(45, 17);
-            this.checkBox3.TabIndex = 50;
-            this.checkBox3.Text = "Bitiş";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // dt1_2
-            // 
-            this.dt1_2.Location = new System.Drawing.Point(77, 38);
-            this.dt1_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt1_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt1_2.Name = "dt1_2";
-            this.dt1_2.Size = new System.Drawing.Size(172, 20);
-            this.dt1_2.TabIndex = 49;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.Location = new System.Drawing.Point(9, 13);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(66, 17);
-            this.checkBox4.TabIndex = 48;
-            this.checkBox4.Text = "Başlama";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // dt1_1
-            // 
-            this.dt1_1.Location = new System.Drawing.Point(77, 12);
-            this.dt1_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt1_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt1_1.Name = "dt1_1";
-            this.dt1_1.Size = new System.Drawing.Size(172, 20);
-            this.dt1_1.TabIndex = 47;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(77, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(172, 20);
-            this.textBox3.TabIndex = 51;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Fiş No";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "Fiş No";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(73, 67);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(172, 20);
-            this.textBox4.TabIndex = 57;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Checked = true;
-            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox5.Location = new System.Drawing.Point(5, 39);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(45, 17);
-            this.checkBox5.TabIndex = 56;
-            this.checkBox5.Text = "Bitiş";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // dt2_2
-            // 
-            this.dt2_2.Location = new System.Drawing.Point(73, 41);
-            this.dt2_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt2_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt2_2.Name = "dt2_2";
-            this.dt2_2.Size = new System.Drawing.Size(172, 20);
-            this.dt2_2.TabIndex = 55;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.Location = new System.Drawing.Point(5, 16);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(66, 17);
-            this.checkBox6.TabIndex = 54;
-            this.checkBox6.Text = "Başlama";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // dt2_1
-            // 
-            this.dt2_1.Location = new System.Drawing.Point(73, 15);
-            this.dt2_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt2_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt2_1.Name = "dt2_1";
-            this.dt2_1.Size = new System.Drawing.Size(172, 20);
-            this.dt2_1.TabIndex = 53;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 70);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 64;
-            this.label7.Text = "Fiş No";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(74, 70);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(172, 20);
-            this.textBox5.TabIndex = 63;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Checked = true;
-            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox7.Location = new System.Drawing.Point(6, 42);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(45, 17);
-            this.checkBox7.TabIndex = 62;
-            this.checkBox7.Text = "Bitiş";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // dt3_2
-            // 
-            this.dt3_2.Location = new System.Drawing.Point(74, 44);
-            this.dt3_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt3_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt3_2.Name = "dt3_2";
-            this.dt3_2.Size = new System.Drawing.Size(172, 20);
-            this.dt3_2.TabIndex = 61;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Checked = true;
-            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox8.Location = new System.Drawing.Point(6, 19);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(66, 17);
-            this.checkBox8.TabIndex = 60;
-            this.checkBox8.Text = "Başlama";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // dt3_1
-            // 
-            this.dt3_1.Location = new System.Drawing.Point(74, 18);
-            this.dt3_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt3_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt3_1.Name = "dt3_1";
-            this.dt3_1.Size = new System.Drawing.Size(172, 20);
-            this.dt3_1.TabIndex = 59;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(2, 69);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "Fiş No";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(73, 69);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(172, 20);
-            this.textBox6.TabIndex = 63;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Checked = true;
-            this.checkBox9.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox9.Location = new System.Drawing.Point(5, 41);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(45, 17);
-            this.checkBox9.TabIndex = 62;
-            this.checkBox9.Text = "Bitiş";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // dt4_2
-            // 
-            this.dt4_2.Location = new System.Drawing.Point(73, 43);
-            this.dt4_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt4_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt4_2.Name = "dt4_2";
-            this.dt4_2.Size = new System.Drawing.Size(172, 20);
-            this.dt4_2.TabIndex = 61;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Checked = true;
-            this.checkBox10.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox10.Location = new System.Drawing.Point(5, 18);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(66, 17);
-            this.checkBox10.TabIndex = 60;
-            this.checkBox10.Text = "Başlama";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // dt4_1
-            // 
-            this.dt4_1.Location = new System.Drawing.Point(73, 17);
-            this.dt4_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt4_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt4_1.Name = "dt4_1";
-            this.dt4_1.Size = new System.Drawing.Size(172, 20);
-            this.dt4_1.TabIndex = 59;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 66);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Fiş No";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(76, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(172, 20);
-            this.textBox7.TabIndex = 63;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Checked = true;
-            this.checkBox11.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox11.Location = new System.Drawing.Point(8, 38);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(45, 17);
-            this.checkBox11.TabIndex = 62;
-            this.checkBox11.Text = "Bitiş";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // dt5_2
-            // 
-            this.dt5_2.Location = new System.Drawing.Point(76, 40);
-            this.dt5_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt5_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt5_2.Name = "dt5_2";
-            this.dt5_2.Size = new System.Drawing.Size(172, 20);
-            this.dt5_2.TabIndex = 61;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Checked = true;
-            this.checkBox12.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox12.Location = new System.Drawing.Point(8, 15);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(66, 17);
-            this.checkBox12.TabIndex = 60;
-            this.checkBox12.Text = "Başlama";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // dt5_1
-            // 
-            this.dt5_1.Location = new System.Drawing.Point(76, 14);
-            this.dt5_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt5_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt5_1.Name = "dt5_1";
-            this.dt5_1.Size = new System.Drawing.Size(172, 20);
-            this.dt5_1.TabIndex = 59;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(2, 65);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
-            this.label10.TabIndex = 64;
-            this.label10.Text = "Fiş No";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(73, 65);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(172, 20);
-            this.textBox8.TabIndex = 63;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Checked = true;
-            this.checkBox13.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox13.Location = new System.Drawing.Point(5, 37);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(45, 17);
-            this.checkBox13.TabIndex = 62;
-            this.checkBox13.Text = "Bitiş";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // dt6_2
-            // 
-            this.dt6_2.Location = new System.Drawing.Point(73, 39);
-            this.dt6_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt6_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt6_2.Name = "dt6_2";
-            this.dt6_2.Size = new System.Drawing.Size(172, 20);
-            this.dt6_2.TabIndex = 61;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Checked = true;
-            this.checkBox14.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox14.Location = new System.Drawing.Point(5, 14);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(66, 17);
-            this.checkBox14.TabIndex = 60;
-            this.checkBox14.Text = "Başlama";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // dt6_1
-            // 
-            this.dt6_1.Location = new System.Drawing.Point(73, 13);
-            this.dt6_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt6_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt6_1.Name = "dt6_1";
-            this.dt6_1.Size = new System.Drawing.Size(172, 20);
-            this.dt6_1.TabIndex = 59;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 64);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 13);
-            this.label11.TabIndex = 64;
-            this.label11.Text = "Fiş No";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(81, 64);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(172, 20);
-            this.textBox9.TabIndex = 63;
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Checked = true;
-            this.checkBox15.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox15.Location = new System.Drawing.Point(13, 36);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(45, 17);
-            this.checkBox15.TabIndex = 62;
-            this.checkBox15.Text = "Bitiş";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // dt7_2
-            // 
-            this.dt7_2.Location = new System.Drawing.Point(81, 38);
-            this.dt7_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt7_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt7_2.Name = "dt7_2";
-            this.dt7_2.Size = new System.Drawing.Size(172, 20);
-            this.dt7_2.TabIndex = 61;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Checked = true;
-            this.checkBox16.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox16.Location = new System.Drawing.Point(13, 13);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(66, 17);
-            this.checkBox16.TabIndex = 60;
-            this.checkBox16.Text = "Başlama";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            // 
-            // dt7_1
-            // 
-            this.dt7_1.Location = new System.Drawing.Point(81, 12);
-            this.dt7_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt7_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt7_1.Name = "dt7_1";
-            this.dt7_1.Size = new System.Drawing.Size(172, 20);
-            this.dt7_1.TabIndex = 59;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 66);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 13);
-            this.label12.TabIndex = 64;
-            this.label12.Text = "Fiş No";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(76, 66);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(172, 20);
-            this.textBox10.TabIndex = 63;
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Checked = true;
-            this.checkBox17.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox17.Location = new System.Drawing.Point(8, 38);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(45, 17);
-            this.checkBox17.TabIndex = 62;
-            this.checkBox17.Text = "Bitiş";
-            this.checkBox17.UseVisualStyleBackColor = true;
-            // 
-            // dt8_2
-            // 
-            this.dt8_2.Location = new System.Drawing.Point(76, 40);
-            this.dt8_2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt8_2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt8_2.Name = "dt8_2";
-            this.dt8_2.Size = new System.Drawing.Size(172, 20);
-            this.dt8_2.TabIndex = 61;
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Checked = true;
-            this.checkBox18.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox18.Location = new System.Drawing.Point(8, 15);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(66, 17);
-            this.checkBox18.TabIndex = 60;
-            this.checkBox18.Text = "Başlama";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // dt8_1
-            // 
-            this.dt8_1.Location = new System.Drawing.Point(76, 14);
-            this.dt8_1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
-            this.dt8_1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.dt8_1.Name = "dt8_1";
-            this.dt8_1.Size = new System.Drawing.Size(172, 20);
-            this.dt8_1.TabIndex = 59;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(460, 20);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(94, 13);
-            this.label13.TabIndex = 53;
-            this.label13.Text = "Toplam / Aktarılan";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(600, 20);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 13);
-            this.label14.TabIndex = 54;
-            this.label14.Text = "Aktarılamayan";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(600, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 13);
-            this.label15.TabIndex = 56;
-            this.label15.Text = "Aktarılamayan";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(460, 20);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(94, 13);
-            this.label16.TabIndex = 55;
-            this.label16.Text = "Toplam / Aktarılan";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(600, 20);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 13);
-            this.label17.TabIndex = 56;
-            this.label17.Text = "Aktarılamayan";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(460, 20);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(94, 13);
-            this.label18.TabIndex = 55;
-            this.label18.Text = "Toplam / Aktarılan";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(600, 20);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(73, 13);
-            this.label19.TabIndex = 60;
-            this.label19.Text = "Aktarılamayan";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(460, 20);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(94, 13);
-            this.label20.TabIndex = 59;
-            this.label20.Text = "Toplam / Aktarılan";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(600, 20);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(73, 13);
-            this.label21.TabIndex = 66;
-            this.label21.Text = "Aktarılamayan";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(460, 20);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 13);
-            this.label22.TabIndex = 65;
-            this.label22.Text = "Toplam / Aktarılan";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(600, 20);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(73, 13);
-            this.label23.TabIndex = 66;
-            this.label23.Text = "Aktarılamayan";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(460, 20);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(94, 13);
-            this.label24.TabIndex = 65;
-            this.label24.Text = "Toplam / Aktarılan";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(600, 20);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(73, 13);
-            this.label25.TabIndex = 66;
-            this.label25.Text = "Aktarılamayan";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(460, 20);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(94, 13);
-            this.label26.TabIndex = 65;
-            this.label26.Text = "Toplam / Aktarılan";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(600, 20);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(73, 13);
-            this.label27.TabIndex = 66;
-            this.label27.Text = "Aktarılamayan";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(460, 20);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(94, 13);
-            this.label28.TabIndex = 65;
-            this.label28.Text = "Toplam / Aktarılan";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(600, 20);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(73, 13);
-            this.label29.TabIndex = 66;
-            this.label29.Text = "Aktarılamayan";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(460, 20);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(94, 13);
-            this.label30.TabIndex = 65;
-            this.label30.Text = "Toplam / Aktarılan";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(592, 21);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(73, 13);
-            this.label31.TabIndex = 66;
-            this.label31.Text = "Aktarılamayan";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(456, 20);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(94, 13);
-            this.label32.TabIndex = 65;
-            this.label32.Text = "Toplam / Aktarılan";
-            //
-            // dgvAlisMasraf
-            //
-            this.dgvAlisMasraf.AllowUserToAddRows = false;
-            this.dgvAlisMasraf.AllowUserToDeleteRows = false;
-            this.dgvAlisMasraf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlisMasraf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAlisMasraf.Location = new System.Drawing.Point(3, 103);
-            this.dgvAlisMasraf.Name = "dgvAlisMasraf";
-            this.dgvAlisMasraf.ReadOnly = true;
-            this.dgvAlisMasraf.Size = new System.Drawing.Size(1089, 501);
-            this.dgvAlisMasraf.TabIndex = 50;
-            //
-            // dgvSatisMasraf
-            //
-            this.dgvSatisMasraf.AllowUserToAddRows = false;
-            this.dgvSatisMasraf.AllowUserToDeleteRows = false;
-            this.dgvSatisMasraf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSatisMasraf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSatisMasraf.Location = new System.Drawing.Point(3, 103);
-            this.dgvSatisMasraf.Name = "dgvSatisMasraf";
-            this.dgvSatisMasraf.ReadOnly = true;
-            this.dgvSatisMasraf.Size = new System.Drawing.Size(1089, 501);
-            this.dgvSatisMasraf.TabIndex = 50;
-            //
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2079,10 +2067,14 @@ namespace V3ToLogo.UIL
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaturaWS)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlisMasraf)).EndInit();
             this.tabPageAlisMasraf.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSatisMasraf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlisMasraf)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.tabPageSatisMasraf.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSatisMasraf)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.tabPageGelenHavale.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGelenHavale)).EndInit();
             this.panel6.ResumeLayout(false);
@@ -2099,10 +2091,6 @@ namespace V3ToLogo.UIL
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2158,7 +2146,6 @@ namespace V3ToLogo.UIL
         private System.Windows.Forms.Label label_gonderilenhavale_error;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.CheckBox cbKrediKartiFisi;
         private System.Windows.Forms.TextBox eFilterKrediKartiFisi;
         private System.Windows.Forms.Label label_kredikarti_success;
         private System.Windows.Forms.Label label_kredikarti_error;
