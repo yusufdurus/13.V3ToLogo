@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using V3ToLogo.BAL;
+using V3ToLogo.MODEL.DATABASE;
+using V3ToLogo.MODEL.GENERAL;
 
 namespace V3ToLogo.UIL
 {
@@ -12,6 +15,7 @@ namespace V3ToLogo.UIL
         private CustomerService customerService = null;
         private InvoiceService invoiceService = null;
         private BankService bankService = null;
+        private bool _stokDataLoaded = false;
         public formMain()
         {
             InitializeComponent();
@@ -23,9 +27,30 @@ namespace V3ToLogo.UIL
         }
         private void formMain_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'iVMEDBDataSet.sp_IvmeProductList' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            //this.sp_IvmeProductListTableAdapter.Fill(this.iVMEDBDataSet.sp_IvmeProductList);
             buttonStop.Enabled = false;
+            SetupErrorGrids();
+        }
+        private void SetupErrorGrids()
+        {
+            DataGridView[] grids = new DataGridView[]
+            {
+                dgvCariHesap, dgvFaturaBP, dgvFaturaR, dgvFaturaWS,
+                dgvAlisMasraf, dgvSatisMasraf,
+                dgvGelenHavale, dgvGonderilenHavale, dgvKrediKarti
+            };
+            foreach (var dgv in grids)
+            {
+                dgv.AutoGenerateColumns = false;
+                dgv.Columns.Add(new DataGridViewTextBoxColumn { Name = "colId", HeaderText = "Id", DataPropertyName = "Id", Width = 120 });
+                dgv.Columns.Add(new DataGridViewTextBoxColumn { Name = "colKod", HeaderText = "Kod", DataPropertyName = "Kod", Width = 150 });
+                dgv.Columns.Add(new DataGridViewTextBoxColumn { Name = "colAciklama", HeaderText = "Açıklama", DataPropertyName = "Aciklama", Width = 200 });
+                dgv.Columns.Add(new DataGridViewTextBoxColumn { Name = "colLog", HeaderText = "Aktarım Log", DataPropertyName = "Log", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+            }
+        }
+        private void BindErrorGrid(DataGridView dgv, List<TransferErrorItem> errorList)
+        {
+            dgv.DataSource = null;
+            dgv.DataSource = errorList;
         }
         private void buttonStart_Click(object sender, EventArgs e)
         {
@@ -84,6 +109,19 @@ namespace V3ToLogo.UIL
             if (checkBox2.Checked)
                 return GeneralBussines.FormatDate(dtEnd.Value);
             else return "";
+        }
+
+        private string GetFormattedDate(CheckBox checkBox, DateTimePicker dateTimePicker)
+        {
+            if (checkBox.Checked)
+                return GeneralBussines.FormatDate(dateTimePicker.Value);
+
+            return "";
+        }
+
+        private bool IsActiveTab(TabPage tabPage)
+        {
+            return tabControl.SelectedTab == tabPage;
         }
 
         private void timerCount_Tick(object sender, EventArgs e)
@@ -153,11 +191,8 @@ namespace V3ToLogo.UIL
 
             Application.DoEvents();
         }
-        private async void button1_Click(object sender, EventArgs e)
+        private async void ButtonRunClick(object sender, EventArgs e)
         {
-            string formattedStartDate = GetStartDate();
-            string formattedEndDate = GetEndDate();
-
             string errMsg = GeneralBussines.SUCCESS_MSG; // ok ise hata yoktur.
             BAL.GeneralBussines.Initialize();
             try
@@ -165,29 +200,72 @@ namespace V3ToLogo.UIL
                 var loginResult = await loginService.DoLoginAsync();
                 if (loginResult.ReturnCode == 100)
                 {
-                    if (cbMalzeme.Checked) 
+                    if (IsActiveTab(tabPageStok))
+                    {
+                        productService.ErrorList.Clear();
                         errMsg = await productService.ProductTransfer();
-                    
-                    if (cbCari.Checked)
+                    }
+
+                    if (IsActiveTab(tabPageCariHesap))
+                    {
+                        customerService.ErrorList.Clear();
                         errMsg = await customerService.CustomerTransfer();
+                        BindErrorGrid(dgvCariHesap, customerService.ErrorList);
+                    }
 
-                    if (cbFaturaBP.Checked)
+                    if (IsActiveTab(tabPageFaturaBP))
+                    {
+                        string formattedStartDate = GetFormattedDate(checkBox4, dt1_1);
+                        string formattedEndDate = GetFormattedDate(checkBox3, dt1_2);
+                        invoiceService.ErrorList.Clear();
                         errMsg = await invoiceService.InvoiceTransfer("BP", formattedStartDate, formattedEndDate, eFilterFaturaBP.Text);
+                        BindErrorGrid(dgvFaturaBP, invoiceService.ErrorList);
+                    }
 
-                    if (cbFaturaWS.Checked)
-                        errMsg = await invoiceService.InvoiceTransfer("WS", formattedStartDate, formattedEndDate, eFilterFaturaWS.Text);
-
-                    if (cbFaturaR.Checked)
+                    if (IsActiveTab(tabPageFaturaR))
+                    {
+                        string formattedStartDate = GetFormattedDate(checkBox6, dt2_1);
+                        string formattedEndDate = GetFormattedDate(checkBox5, dt2_2);
+                        invoiceService.ErrorList.Clear();
                         errMsg = await invoiceService.InvoiceTransfer("R", formattedStartDate, formattedEndDate, eFilterFaturaR.Text);
-                   
-                    if (cbKrediKartiFisi.Checked)
-                        errMsg = await customerService.CHFKrediKartTransfer(formattedStartDate, formattedEndDate, eFilterKrediKartiFisi.Text);
+                        BindErrorGrid(dgvFaturaR, invoiceService.ErrorList);
+                    }
 
-                    if (cbGelenHavale.Checked)
+                    if (IsActiveTab(tabPageFaturaWS))
+                    {
+                        string formattedStartDate = GetFormattedDate(checkBox8, dt3_1);
+                        string formattedEndDate = GetFormattedDate(checkBox7, dt3_2);
+                        invoiceService.ErrorList.Clear();
+                        errMsg = await invoiceService.InvoiceTransfer("WS", formattedStartDate, formattedEndDate, eFilterFaturaWS.Text);
+                        BindErrorGrid(dgvFaturaWS, invoiceService.ErrorList);
+                    }
+
+                    if (IsActiveTab(tabPageGelenHavale))
+                    {
+                        string formattedStartDate = GetFormattedDate(checkBox14, dt6_1);
+                        string formattedEndDate = GetFormattedDate(checkBox13, dt6_2);
+                        bankService.ErrorList.Clear();
                         errMsg = await bankService.BankFicheTransfer("gelenHavale", formattedStartDate, formattedEndDate, eFilterBankaGelenHavale.Text);
+                        BindErrorGrid(dgvGelenHavale, bankService.ErrorList);
+                    }
 
-                    if (cbGonderilenHavale.Checked)
+                    if (IsActiveTab(tabPageGonderilenHavale))
+                    {
+                        string formattedStartDate = GetFormattedDate(checkBox16, dt7_1);
+                        string formattedEndDate = GetFormattedDate(checkBox15, dt7_2);
+                        bankService.ErrorList.Clear();
                         errMsg = await bankService.BankFicheTransfer("gonderilenHavale", formattedStartDate, formattedEndDate, eFilterBankaGonderilenHavale.Text);
+                        BindErrorGrid(dgvGonderilenHavale, bankService.ErrorList);
+                    }
+
+                    if (IsActiveTab(tabPageKrediKarti))
+                    {
+                        string formattedStartDate = GetFormattedDate(checkBox18, dt8_1);
+                        string formattedEndDate = GetFormattedDate(checkBox17, dt8_2);
+                        customerService.ErrorList.Clear();
+                        errMsg = await customerService.CHFKrediKartTransfer(formattedStartDate, formattedEndDate, eFilterKrediKartiFisi.Text);
+                        BindErrorGrid(dgvKrediKarti, customerService.ErrorList);
+                    }
 
                     MessageBox.Show("Tamamlandı!");
                 }
@@ -243,6 +321,11 @@ namespace V3ToLogo.UIL
                     if (affected > 0) MessageBox.Show("Aktarım Logu Silindi");
                 }
             }
+        }
+
+        private void btnStokGetData_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

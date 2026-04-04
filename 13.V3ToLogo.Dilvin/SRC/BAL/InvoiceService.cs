@@ -295,6 +295,13 @@ namespace V3ToLogo.BAL
                             else
                             {
                                 InsertInvoiceErrorLog(masteritem.InvoiceRef, res.Description);
+                                ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                                {
+                                    Id = masteritem.InvoiceRef,
+                                    Kod = slipNumber,
+                                    Aciklama = customerCode,
+                                    Log = res.Description
+                                });
                                 TransferCount_Error += 1;
                                 returnValue = res.Description;
                             }
@@ -304,6 +311,13 @@ namespace V3ToLogo.BAL
                         {
                             returnValue = ex.Message;
                             InsertInvoiceErrorLog(log_invoiceRef, returnValue);
+                            ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                            {
+                                Id = log_invoiceRef,
+                                Kod = slipNumber,
+                                Aciklama = customerCode,
+                                Log = ex.Message
+                            });
                             TransferCount_Error += 1;
                         }
                         System.Windows.Forms.Application.DoEvents();

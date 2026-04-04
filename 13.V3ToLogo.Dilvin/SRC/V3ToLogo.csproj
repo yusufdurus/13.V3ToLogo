@@ -111,11 +111,6 @@
     <Compile Include="BAL\SettingManager.cs" />
     <Compile Include="BAL\GeneralBussines.cs" />
     <Compile Include="DAL\DataHandler.cs" />
-    <Compile Include="IVMEDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IVMEDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="MODEL\ACCESSDB\ConnectionSettings.cs" />
     <Compile Include="MODEL\ACCESSDB\Mapping.cs" />
     <Compile Include="MODEL\ACCESSDB\Timer.cs" />
@@ -184,11 +179,18 @@
     <Compile Include="MODEL\GENERAL\Session.cs" />
     <Compile Include="MODEL\GENERAL\StringArray2D.cs" />
     <Compile Include="MODEL\GENERAL\TimeList.cs" />
+    <Compile Include="MODEL\GENERAL\TransferErrorItem.cs" />
     <Compile Include="MODEL\Response\LoginServiceResult.cs" />
     <Compile Include="OpenAPIs\BankApiReference.cs" />
     <Compile Include="OpenAPIs\CustomerApiReference.cs" />
     <Compile Include="OpenAPIs\InvoiceApiReference.cs" />
     <Compile Include="OpenAPIs\ProductApiReference.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="UIL\formTimerDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,17 +262,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DbModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="IVMEDBDataSet.xsc">
-      <DependentUpon>IVMEDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="IVMEDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IVMEDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IVMEDBDataSet.xss">
-      <DependentUpon>IVMEDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="MODEL\DATABASE\DbModel.edmx.diagram">
       <DependentUpon>DbModel.edmx</DependentUpon>
     </None>
@@ -279,11 +270,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
     <None Include="V3ToLogo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

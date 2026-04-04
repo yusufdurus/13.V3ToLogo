@@ -59,6 +59,11 @@ namespace V3ToLogo.BAL
         }
         public async Task<string> ProductTransfer()
         {
+            return await ProductTransfer(null);
+        }
+
+        public async Task<string> ProductTransfer(IEnumerable<sp_IvmeProductList_Result> productList)
+        {
             string returnValue = GeneralBussines.SUCCESS_MSG;
 
             string log_ProductCode = "";
@@ -72,13 +77,17 @@ namespace V3ToLogo.BAL
                 GeneralBussines.activeTransfer = ActiveTransferType.Malzeme;
                 using (DBEntities entity = new DBEntities())
                 {
-                    List<sp_IvmeProductList_Result> spResList = new List<sp_IvmeProductList_Result>();
-                    spResList = entity.sp_IvmeProductList().ToList();
+                    List<sp_IvmeProductList_Result> spResList = productList != null
+                        ? productList.ToList()
+                        : entity.sp_IvmeProductList().ToList();
+
+                    RecordCount = spResList.Count;
                     var client = new Client(GetApiBaseUrl(), new System.Net.Http.HttpClient());
                     foreach (var spResItem in spResList)
                     {
                         try
                         {
+                            log_ProductCode = spResItem.ProductHierarchyLevel04;
                             var product = CreateProduct(ProductTypeEnum.TicariMal, spResItem);
                             ProductServiceResult res = await client.SaveProductByControlForSpecodeAsync(sessionId, product);
                             if (res.ReturnCode == 100)
@@ -89,6 +98,13 @@ namespace V3ToLogo.BAL
                             else
                             {
                                 InsertProductErrorLog(product.Code, res.Description);
+                                ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                                {
+                                    Id = spResItem.ProductHierarchyLevel04,
+                                    Kod = product.Code,
+                                    Aciklama = product.Name,
+                                    Log = res.Description
+                                });
                                 TransferCount_Error += 1;
                                 returnValue = res.Description;
                             }
@@ -97,6 +113,13 @@ namespace V3ToLogo.BAL
                         {
                             TransferCount_Error += 1;
                             InsertProductErrorLog(log_ProductCode, ex.Message);
+                            ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                            {
+                                Id = spResItem.ProductHierarchyLevel04,
+                                Kod = log_ProductCode,
+                                Aciklama = "",
+                                Log = ex.Message
+                            });
                             returnValue = ex.Message;
                         }
                         System.Windows.Forms.Application.DoEvents();

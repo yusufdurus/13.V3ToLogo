@@ -170,6 +170,13 @@ namespace V3ToLogo.BAL
                             else
                             {
                                 InsertBankErrorLog(slipData.BankTransNumber, res.Description);
+                                ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                                {
+                                    Id = slipData.BankTransNumber,
+                                    Kod = slipData.BankTransTypeCode.ToString(),
+                                    Aciklama = slipData.Description,
+                                    Log = res.Description
+                                });
                                 TransferCount_Error += 1;
                                 returnValue = res.Description;
                             }
@@ -179,6 +186,13 @@ namespace V3ToLogo.BAL
                         {
                             returnValue = ex.Message;
                             InsertBankErrorLog(log_Ref, returnValue);
+                            ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                            {
+                                Id = log_Ref,
+                                Kod = slipData.BankTransTypeCode.ToString(),
+                                Aciklama = slipData.Description,
+                                Log = ex.Message
+                            });
                             TransferCount_Error += 1;
                         }
                         System.Windows.Forms.Application.DoEvents();

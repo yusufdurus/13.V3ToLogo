@@ -137,6 +137,13 @@ namespace V3ToLogo.BAL
                             else
                             {
                                 InsertCustomerErrorLog(customerItem.CustomerCode, res.Description);
+                                ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                                {
+                                    Id = spResItem.CurrAccCode,
+                                    Kod = customerItem.CustomerCode,
+                                    Aciklama = spResItem.CurrAccDescription,
+                                    Log = res.Description
+                                });
                                 TransferCount_Error += 1;
                                 returnValue = res.Description;
                             }
@@ -144,6 +151,13 @@ namespace V3ToLogo.BAL
                         catch (Exception ex)
                         {
                             InsertCustomerErrorLog(log_customerCode, ex.Message);
+                            ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                            {
+                                Id = spResItem.CurrAccCode,
+                                Kod = log_customerCode,
+                                Aciklama = spResItem.CurrAccDescription,
+                                Log = ex.Message
+                            });
                             TransferCount_Error += 1;
                             returnValue = ex.Message;
                         }
@@ -264,6 +278,13 @@ namespace V3ToLogo.BAL
                             else
                             {
                                 InsertCLFicheErrorLog(slipData.CreditCardPaymentNumber, res.Description);
+                                ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                                {
+                                    Id = slipData.CreditCardPaymentNumber,
+                                    Kod = slipData.CariKod,
+                                    Aciklama = slipData.BankCode,
+                                    Log = res.Description
+                                });
                                 TransferCount_Error += 1;
                                 returnValue = res.Description;
                             }
@@ -273,6 +294,13 @@ namespace V3ToLogo.BAL
                         {
                             returnValue = ex.Message;
                             InsertCLFicheErrorLog(log_Ref, returnValue);
+                            ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
+                            {
+                                Id = log_Ref,
+                                Kod = slipData.CariKod,
+                                Aciklama = slipData.BankCode,
+                                Log = ex.Message
+                            });
                             TransferCount_Error += 1;
                         }
                         System.Windows.Forms.Application.DoEvents();
