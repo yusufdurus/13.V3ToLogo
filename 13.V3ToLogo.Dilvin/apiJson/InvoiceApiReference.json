@@ -1,0 +1,926 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Invoice Api",
+        "version": "v1"
+    },
+    "paths": {
+        "/api/Invoice/CreateSaleInvoice": {
+            "post": {
+                "tags": [
+                    "Invoice"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Invoice/CreateSaleInvoiceForV3Project": {
+            "post": {
+                "tags": [
+                    "Invoice"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Invoice/CreatePurchInvoice": {
+            "post": {
+                "tags": [
+                    "Invoice"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Invoice/CreatePurchInvoiceForV3Project": {
+            "post": {
+                "tags": [
+                    "Invoice"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Invoice"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Invoice/CancelInvoice": {
+            "post": {
+                "tags": [
+                    "Invoice"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "invoiceNr",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "invoiceType",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "$ref": "#/components/schemas/InvoiceTypeEnum"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Test/CreateSaleInvoice": {
+            "get": {
+                "tags": [
+                    "Test"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InvoiceServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Test"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/OrderServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/OrderServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/OrderServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Invoice": {
+                "type": "object",
+                "properties": {
+                    "trCode": {
+                        "$ref": "#/components/schemas/InvoiceTypeEnum"
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "customerCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "slipNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "docNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "salesmanCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "projectCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "specialCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "divisionNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "departmentNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "factoryNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "wareHouseNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "trCurrency": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "trRate": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "rcRate": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "paymentCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "description_": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "currselTotals": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "currselTransactions": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "invoiceLines": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InvoiceLine"
+                        },
+                        "nullable": true
+                    },
+                    "invoiceGeneralDiscounts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InvoiceLine"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "InvoiceLine": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "integer",
+                        "format": "int32",
+                        "readOnly": true
+                    },
+                    "lineTypeEnum": {
+                        "$ref": "#/components/schemas/InvoiceLineTypeEnum"
+                    },
+                    "masterCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "typeStr": {
+                        "type": "string",
+                        "nullable": true,
+                        "readOnly": true
+                    },
+                    "orderReference": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "dbFields": {
+                        "$ref": "#/components/schemas/InvoiceLineDBFields"
+                    },
+                    "quantity": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "currencyId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "currencyRate": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "price": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "localPrice": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "vatRate": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "vatIncluded": {
+                        "type": "boolean"
+                    },
+                    "unitCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "unitConv1": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "unitConv2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "variantCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "variantName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "serialNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "serialNumbers": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "discountCalcType": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "discount": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "discountRate": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "InvoiceLineDBFields": {
+                "type": "object",
+                "properties": {
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "stockRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "variantRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "stFicheRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "uomRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "usRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "ordTransRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "InvoiceLineTypeEnum": {
+                "enum": [
+                    0,
+                    2,
+                    4
+                ],
+                "type": "integer",
+                "format": "int32"
+            },
+            "InvoiceServiceResult": {
+                "type": "object",
+                "properties": {
+                    "returnCode": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "success": {
+                        "type": "boolean",
+                        "readOnly": true
+                    },
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "InvoiceTypeEnum": {
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    13,
+                    14,
+                    26
+                ],
+                "type": "integer",
+                "format": "int32"
+            },
+            "LOrder": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "customerCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "slipNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "docNr": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "orderStatus": {
+                        "$ref": "#/components/schemas/OrderStatusEnum"
+                    },
+                    "projectCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "specialCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "paymentCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "divisionNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "departmentNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "factoryNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "wareHouseNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "salesmanCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "trCurrency": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "trRate": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "orderLines": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/OrderLine"
+                        },
+                        "nullable": true
+                    },
+                    "orderGeneralDiscounts": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/OrderLine"
+                        },
+                        "nullable": true
+                    },
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "OrderLine": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "integer",
+                        "format": "int32",
+                        "readOnly": true
+                    },
+                    "masterCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "typeStr": {
+                        "type": "string",
+                        "nullable": true,
+                        "readOnly": true
+                    },
+                    "lineTypeEnum": {
+                        "$ref": "#/components/schemas/InvoiceLineTypeEnum"
+                    },
+                    "quantity": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "price": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "vatRate": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "vatIncluded": {
+                        "type": "boolean"
+                    },
+                    "unitCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "unitConv1": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "unitConv2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "variantCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "variantName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "serialNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "serialNumbers": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "specialCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "rezerve": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "rezerveQuantity": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "rezerveDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "salesmanCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "delivertCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "dbFields": {
+                        "$ref": "#/components/schemas/OrderLineDBFields"
+                    },
+                    "discountCalcType": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "discount": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "discountRate": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "OrderLineDBFields": {
+                "type": "object",
+                "properties": {
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "stockRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "variantRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "uomRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "usRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "OrderServiceResult": {
+                "type": "object",
+                "properties": {
+                    "returnCode": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "success": {
+                        "type": "boolean",
+                        "readOnly": true
+                    },
+                    "orderCount": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "orderList": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LOrder"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "OrderStatusEnum": {
+                "enum": [
+                    1,
+                    2,
+                    4
+                ],
+                "type": "integer",
+                "format": "int32"
+            }
+        }
+    }
+}

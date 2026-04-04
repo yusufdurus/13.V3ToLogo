@@ -1,0 +1,5106 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "LogoWebServiceApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Bank/CreateBankSlip": {
+      "post": {
+        "tags": [
+          "Bank"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BankFiche"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BankFiche"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BankFiche"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BankFicheServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BankFicheServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BankFicheServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Customer/GetCustomerList": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Customer/GetCustomerListByTerminalCode": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "terminalCode",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Customer/SaveCustomer": {
+      "post": {
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Customer/SaveCustomerByControlForSpecode": {
+      "post": {
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Customer"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Customer/CreateCustomerSlip": {
+      "post": {
+        "tags": [
+          "Customer"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerSlip"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerSlip"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomerSlip"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerSlipServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerSlipServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerSlipServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Firm/GetCurrencyList": {
+      "get": {
+        "tags": [
+          "Firm"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CurrencyServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Firm/GetFirmList": {
+      "get": {
+        "tags": [
+          "Firm"
+        ],
+        "parameters": [
+          {
+            "name": "password",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "adminUserName",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "adminUserPassword",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FirmServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FirmServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FirmServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Firm/GetFirm": {
+      "get": {
+        "tags": [
+          "Firm"
+        ],
+        "parameters": [
+          {
+            "name": "password",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "adminUserName",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "adminUserPassword",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "firmNr",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FirmServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FirmServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FirmServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Firm/GetWareHouseList_12": {
+      "get": {
+        "tags": [
+          "Firm"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Invoice/CreateSaleInvoice": {
+      "post": {
+        "tags": [
+          "Invoice"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Invoice/CreateSaleInvoiceForV3Project": {
+      "post": {
+        "tags": [
+          "Invoice"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Invoice/CreatePurchInvoice": {
+      "post": {
+        "tags": [
+          "Invoice"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Invoice/CreatePurchInvoiceForV3Project": {
+      "post": {
+        "tags": [
+          "Invoice"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Invoice"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Invoice/CancelInvoice": {
+      "post": {
+        "tags": [
+          "Invoice"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "invoiceNr",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "invoiceType",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "$ref": "#/components/schemas/InvoiceTypeEnum"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Login/DoLogin": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "parameters": [
+          {
+            "name": "accessKey",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userName",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "firmNr",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "periodNr",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Login/IsConnected": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Login/IsConnectedWithSessionId": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Login/Disconnect": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Order/CreateSaleOrder": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Order"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Price/GetSailProductPriceList": {
+      "get": {
+        "tags": [
+          "Price"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Price/GetSailServicePriceList": {
+      "get": {
+        "tags": [
+          "Price"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PriceServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/GetProductList": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/IsExistProduct": {
+      "get": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "productCode",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/SaveProduct": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/SaveProductByControlForSpecode": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/CreateRFIDWareHouseSlip": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RFIDProductSlip"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RFIDProductSlip"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RFIDProductSlip"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/CreateStocktaking": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Stocktaking"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Stocktaking"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Stocktaking"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Product/CreateStocktakingList": {
+      "post": {
+        "tags": [
+          "Product"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Stocktaking"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Stocktaking"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Stocktaking"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProductSlipServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SafeDeposit/v1/CreateSafeDepositTrans": {
+      "post": {
+        "tags": [
+          "SafeDeposit"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SafeDepositTrans"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SafeDepositTrans"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SafeDepositTrans"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SafeDepositTransServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SafeDepositTransServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SafeDepositTransServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Salesman/GetSalesmanList": {
+      "get": {
+        "tags": [
+          "Salesman"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalesmanServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalesmanServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalesmanServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Salesman/SaveSalesman": {
+      "post": {
+        "tags": [
+          "Salesman"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Salesman"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Salesman"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Salesman"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalesmanServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalesmanServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalesmanServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SrvCard/GetSailSrvCardList": {
+      "get": {
+        "tags": [
+          "SrvCard"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SrvCardServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SrvCardServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SrvCardServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SrvCard/SaveSrvCard": {
+      "post": {
+        "tags": [
+          "SrvCard"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SrvCard"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SrvCard"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SrvCard"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SrvCardServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SrvCardServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SrvCardServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Test/Check": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "operationId": "Check",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Test/GetFirstNameById": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "operationId": "GetFirstNameById",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Test/DoLogin": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "operationId": "DoLogin",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Test/CreateSaleInvoice": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoiceServiceResult"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Test/CreateSafeDeposit": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SafeDepositTransServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SafeDepositTransServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SafeDepositTransServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Test/CreateCustomerSlip": {
+      "post": {
+        "tags": [
+          "Test"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerSlipServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerSlipServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomerSlipServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Unitset/GetUnitSetList": {
+      "get": {
+        "tags": [
+          "Unitset"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnitSetServiceResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnitSetServiceResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnitSetServiceResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetTest",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccountTypeEnum": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "BankFiche": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/BankFicheTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/BankFicheDBFields"
+          },
+          "bankFicheLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BankFicheLine"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BankFicheDBFields": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BankFicheLine": {
+        "type": "object",
+        "properties": {
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "approveNr": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "credit": {
+            "type": "number",
+            "format": "double"
+          },
+          "debit": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "BankFicheServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "slipCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "slipList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BankFiche"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BankFicheTypeEnum": {
+        "enum": [
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "CurrencyServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "recordCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currencyList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Currency_"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Currency_": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currencyNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "currencyName": {
+            "type": "string",
+            "nullable": true
+          },
+          "subDigits": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Customer": {
+        "type": "object",
+        "properties": {
+          "accountType": {
+            "$ref": "#/components/schemas/AccountTypeEnum"
+          },
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "definition": {
+            "type": "string",
+            "nullable": true
+          },
+          "definition2": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode3": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode4": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode5": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine1": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "postCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneCode1": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber1": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber2": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneExtNumber1": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneExtNumber2": {
+            "type": "string",
+            "nullable": true
+          },
+          "faxCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "faxNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "faxExtNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "eMailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "districtCode1": {
+            "type": "string",
+            "nullable": true
+          },
+          "districtCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "eBusinessCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "contact": {
+            "type": "string",
+            "nullable": true
+          },
+          "contact2": {
+            "type": "string",
+            "nullable": true
+          },
+          "contact3": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupFirmNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "groupCustomerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "tckNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxNr": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxOfficeCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxOffice": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPersonCompany": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useSALESBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usePURCHBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useIMPBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useEXPBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useFINBRWS": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "customerCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "customerList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LCustomer"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerSlip": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/CustomerSlipTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "division": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerSlipLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerSlipLine"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerSlipLine": {
+        "type": "object",
+        "properties": {
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "bankAccountCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "approveNr": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "creditCardNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "credit": {
+            "type": "number",
+            "format": "double"
+          },
+          "debit": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerSlipServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "slipCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "slipList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LCustomerSlip"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CustomerSlipTypeEnum": {
+        "enum": [
+          70
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Department_": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firmNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Division_": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firmNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Factory_": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firmNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FirmServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "firmCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firmList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Firm_"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Firm_": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "periodList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Period_"
+            },
+            "nullable": true
+          },
+          "divisionList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Division_"
+            },
+            "nullable": true
+          },
+          "factoryList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Factory_"
+            },
+            "nullable": true
+          },
+          "departmentList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Department_"
+            },
+            "nullable": true
+          },
+          "wareHouseList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WareHouse_"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Invoice": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/InvoiceTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "salesmanCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "factoryNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trCurrency": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "paymentCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description_": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceLine"
+            },
+            "nullable": true
+          },
+          "invoiceGeneralDiscounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceDiscountLine"
+            },
+            "nullable": true
+          },
+          "invoiceServiceLine": {
+            "$ref": "#/components/schemas/InvoiceServiceLine"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceDiscountLine": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "masterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeStr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "orderReference": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/InvoiceLineDBFields"
+          },
+          "discountCalcType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "discount": {
+            "type": "number",
+            "format": "double"
+          },
+          "discountRate": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceLine": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "masterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeStr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "orderReference": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/InvoiceLineDBFields"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceLineDBFields": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stockRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "variantRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stFicheRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "uomRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ordTransRef": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceProductLine": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "masterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeStr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "orderReference": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/InvoiceLineDBFields"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "vatRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "vatIncluded": {
+            "type": "boolean"
+          },
+          "unitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitConv1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitConv2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "variantCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "variantName": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceServiceLine": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "masterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeStr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "orderReference": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/InvoiceLineDBFields"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "vatRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "vatIncluded": {
+            "type": "boolean"
+          },
+          "unitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitConv1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitConv2": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "invoiceCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "invoiceList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LInvoice"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceTypeEnum": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          13,
+          14,
+          26
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "LCustomer": {
+        "type": "object",
+        "properties": {
+          "accountType": {
+            "$ref": "#/components/schemas/AccountTypeEnum"
+          },
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "definition": {
+            "type": "string",
+            "nullable": true
+          },
+          "definition2": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode3": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode4": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode5": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine1": {
+            "type": "string",
+            "nullable": true
+          },
+          "addressLine2": {
+            "type": "string",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "nullable": true
+          },
+          "postCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneCode1": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber1": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber2": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneExtNumber1": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneExtNumber2": {
+            "type": "string",
+            "nullable": true
+          },
+          "faxCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "faxNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "faxExtNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "eMailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "districtCode1": {
+            "type": "string",
+            "nullable": true
+          },
+          "districtCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "eBusinessCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "contact": {
+            "type": "string",
+            "nullable": true
+          },
+          "contact2": {
+            "type": "string",
+            "nullable": true
+          },
+          "contact3": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupFirmNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "groupCustomerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "tckNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxNr": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxOfficeCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxOffice": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPersonCompany": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useSALESBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usePURCHBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useIMPBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useEXPBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useFINBRWS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LCustomerSlip": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/CustomerSlipTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "division": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerSlipLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CustomerSlipLine"
+            },
+            "nullable": true
+          },
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LInvoice": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/InvoiceTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "salesmanCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "factoryNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trCurrency": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "paymentCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description_": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceLine"
+            },
+            "nullable": true
+          },
+          "invoiceGeneralDiscounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceDiscountLine"
+            },
+            "nullable": true
+          },
+          "invoiceServiceLine": {
+            "$ref": "#/components/schemas/InvoiceServiceLine"
+          },
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LOrder": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNr": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderStatus": {
+            "$ref": "#/components/schemas/OrderStatusEnum"
+          },
+          "projectCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "factoryNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "salesmanCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "trCurrency": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "orderLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLine"
+            },
+            "nullable": true
+          },
+          "orderGeneralDiscounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderDiscountLine"
+            },
+            "nullable": true
+          },
+          "orderServiceLine": {
+            "$ref": "#/components/schemas/OrderServiceLine"
+          },
+          "orderProductLine": {
+            "$ref": "#/components/schemas/OrderProductLine"
+          },
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LProduct": {
+        "type": "object",
+        "properties": {
+          "cardType": {
+            "$ref": "#/components/schemas/ProductTypeEnum"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "name2": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitSetCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode3": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode4": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode5": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "producerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "b2CCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "markCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "vat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sellVat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "returnVat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sellPrVat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "returnPrVat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paymentCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "eBusinessCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useFMM": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useFPurch": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useFSales": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shelfLife": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shelfDate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LProductSlip": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/ProductSlipTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "factoryNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceProductLine"
+            },
+            "nullable": true
+          },
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LSafeDepositTrans": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/SafeDepositTransTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "slipNr": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "safeDepositCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trCurrency": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "sessionId": {
+            "type": "string",
+            "nullable": true
+          },
+          "firmNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "periodNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Order": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNr": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderStatus": {
+            "$ref": "#/components/schemas/OrderStatusEnum"
+          },
+          "projectCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "factoryNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "salesmanCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "trCurrency": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "orderLines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderLine"
+            },
+            "nullable": true
+          },
+          "orderGeneralDiscounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderDiscountLine"
+            },
+            "nullable": true
+          },
+          "orderServiceLine": {
+            "$ref": "#/components/schemas/OrderServiceLine"
+          },
+          "orderProductLine": {
+            "$ref": "#/components/schemas/OrderProductLine"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderDiscountLine": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "masterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeStr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/OrderLineDBFields"
+          },
+          "discountCalcType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "discount": {
+            "type": "number",
+            "format": "double"
+          },
+          "discountRate": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderLine": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "masterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeStr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/OrderLineDBFields"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderLineDBFields": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stockRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "variantRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "uomRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usRef": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderProductLine": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "masterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeStr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/OrderLineDBFields"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "vatRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "vatIncluded": {
+            "type": "boolean"
+          },
+          "unitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitConv1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitConv2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "variantCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "variantName": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNumbers": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "rezerve": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rezerveQuantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "rezerveDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "salesmanCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "delivertCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderServiceLine": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "masterCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeStr": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/OrderLineDBFields"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "vatRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "vatIncluded": {
+            "type": "boolean"
+          },
+          "unitCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitConv1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitConv2": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "orderCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LOrder"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrderStatusEnum": {
+        "enum": [
+          1,
+          2,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Period_": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firmNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "begDate": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "endDate": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Price": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cardRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clientCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "price_": {
+            "type": "number",
+            "format": "double"
+          },
+          "currency": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "begDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "vat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitSetLineRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriceServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "recordCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "priceList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Price"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "cardType": {
+            "$ref": "#/components/schemas/ProductTypeEnum"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "name2": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitSetCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode3": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode4": {
+            "type": "string",
+            "nullable": true
+          },
+          "speCode5": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "producerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "b2CCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "markCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "vat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sellVat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "returnVat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sellPrVat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "returnPrVat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paymentCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "eBusinessCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "useFMM": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useFPurch": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "useFSales": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shelfLife": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "shelfDate": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "productCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LProduct"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductSlipServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "productSlipCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "productSlipList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LProductSlip"
+            },
+            "nullable": true
+          },
+          "rfidSqlStatement": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProductSlipTypeEnum": {
+        "enum": [
+          11,
+          12,
+          13,
+          14,
+          25,
+          50,
+          51
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ProductTypeEnum": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          10,
+          11,
+          12,
+          13
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "RFIDProductSlip": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/ProductSlipTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "slipNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "factoryNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceProductLine"
+            },
+            "nullable": true
+          },
+          "rfidLines": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SafeDepositTrans": {
+        "type": "object",
+        "properties": {
+          "trCode": {
+            "$ref": "#/components/schemas/SafeDepositTransTypeEnum"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "slipNr": {
+            "type": "string",
+            "nullable": true
+          },
+          "customerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "safeDepositCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trCurrency": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trRate": {
+            "type": "number",
+            "format": "double"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceRef": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SafeDepositTransServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "slipCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "slipList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LSafeDepositTrans"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SafeDepositTransTypeEnum": {
+        "enum": [
+          11,
+          12
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Salesman": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesmanServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "salesmanCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "salesmanList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Salesman"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SrvCard": {
+        "type": "object",
+        "properties": {
+          "cardType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "description2": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "cyphCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitSetCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "vat": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dbFields": {
+            "$ref": "#/components/schemas/SrvCardDBFields"
+          },
+          "_Version": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SrvCardDBFields": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitSetRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SrvCardServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "srvCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "srvCardList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SrvCard"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockTakingLineTypeEnum": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Stocktaking": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "docNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "divisionNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "factoryNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "wareHouseNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stockTakingLineType": {
+            "$ref": "#/components/schemas/StockTakingLineTypeEnum"
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StocktakingLine"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StocktakingLine": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnitSet": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cardType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "specialCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "modifiedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "version": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "unitSetLineList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnitSetLine"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnitSetLine": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "unitSetRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lineNR": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "mainUnit": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "convFact1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "convFact2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "globalCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnitSetServiceResult": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "success": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "unitSetCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "unitSetList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UnitSet"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WareHouse_": {
+        "type": "object",
+        "properties": {
+          "logicalRef": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firmNr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nr": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

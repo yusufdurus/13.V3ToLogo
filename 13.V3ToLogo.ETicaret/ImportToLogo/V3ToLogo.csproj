@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54F715BD-F10A-4831-8880-DBA52BDFECE6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImportToLogo</RootNamespace>
+    <AssemblyName>ImportToLogo</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Designbolts-Seo-Time-Management.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL\BaseService.cs" />
+    <Compile Include="BAL\CustomerService.cs" />
+    <Compile Include="BAL\InvoiceService.cs" />
+    <Compile Include="BAL\LoginService.cs" />
+    <Compile Include="BAL\ProductService.cs" />
+    <Compile Include="BAL\TimerBussiness.cs" />
+    <Compile Include="BAL\SettingManager.cs" />
+    <Compile Include="BAL\GeneralBussines.cs" />
+    <Compile Include="DAL\DataHandler.cs" />
+    <Compile Include="MODEL\ACCESSDB\ConnectionSettings.cs" />
+    <Compile Include="MODEL\ACCESSDB\Mapping.cs" />
+    <Compile Include="MODEL\ACCESSDB\Timer.cs" />
+    <Compile Include="MODEL\ACCESSDB\TimerDetail.cs" />
+    <Compile Include="MODEL\ACCESSDB\VV_Timer.cs" />
+    <Compile Include="MODEL\GENERAL\Session.cs" />
+    <Compile Include="MODEL\GENERAL\StringArray2D.cs" />
+    <Compile Include="MODEL\GENERAL\TimeList.cs" />
+    <Compile Include="MODEL\LOGODB\IVME_TRANSFER_CUSTOMER.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\IVME_TRANSFER_CUSTOMER_ERR.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\IVME_TRANSFER_INVOICE.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\IVME_TRANSFER_INVOICE_ERR.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\IVME_TRANSFER_PRODUCT.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\IVME_TRANSFER_PRODUCT_ERR.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\LogoModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogoModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\LogoModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\LogoModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogoModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\sp_IvmeCustomerCommList_Result.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\sp_IvmeCustomerList_Result.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\sp_IvmeInvoiceList_Result.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\LOGODB\sp_IvmeProductList_Result.cs">
+      <DependentUpon>LogoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\Response\LoginServiceResult.cs" />
+    <Compile Include="OpenAPIs\CustomerApiReference.cs" />
+    <Compile Include="OpenAPIs\InvoiceApiReference.cs" />
+    <Compile Include="OpenAPIs\ProductApiReference.cs" />
+    <Compile Include="UIL\formTimerDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\formTimerDetail.Designer.cs">
+      <DependentUpon>formTimerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\formTimerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\formTimerList.Designer.cs">
+      <DependentUpon>formTimerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIL\formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIL\formSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIL\formSettings.Designer.cs">
+      <DependentUpon>formSettings.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UIL\formTimerDetail.resx">
+      <DependentUpon>formTimerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\formTimerList.resx">
+      <DependentUpon>formTimerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIL\formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UIL\formSettings.resx">
+      <DependentUpon>formSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\apiJson\CustomerApiReference.json">
+      <Link>OpenAPIs\CustomerApiReference.json</Link>
+      <CodeGenerator>NSwagCSharp</CodeGenerator>
+    </None>
+    <None Include="..\apiJson\InvoiceApiReference.json">
+      <Link>OpenAPIs\InvoiceApiReference.json</Link>
+      <CodeGenerator>NSwagCSharp</CodeGenerator>
+    </None>
+    <None Include="..\apiJson\ProductApiReference.json">
+      <Link>OpenAPIs\ProductApiReference.json</Link>
+      <CodeGenerator>NSwagCSharp</CodeGenerator>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="MODEL\LOGODB\LogoModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LogoModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MODEL\LOGODB\LogoModel.edmx.diagram">
+      <DependentUpon>LogoModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MODEL\LOGODB\LogoModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LogoModel.edmx</DependentUpon>
+      <LastGenOutput>LogoModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MODEL\LOGODB\LogoModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LogoModel.edmx</DependentUpon>
+      <LastGenOutput>LogoModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\Designbolts-Seo-Time-Management.ico" />
+    <None Include="Resources\settings_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

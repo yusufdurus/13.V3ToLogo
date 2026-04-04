@@ -1,0 +1,1190 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Product Api",
+        "version": "v1"
+    },
+    "paths": {
+        "/api/Price/GetSailProductPriceList": {
+            "get": {
+                "tags": [
+                    "Price"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PriceServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Product/GetProductList": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "version",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Product/IsExistProduct": {
+            "get": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "productCode",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "type": "boolean"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Product/SaveProduct": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Product"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Product"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Product"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Product/SaveProductByControlForSpecode": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Product"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Product"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Product"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Product/CreateRFIDWareHouseSlip": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RFIDProductSlip"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RFIDProductSlip"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RFIDProductSlip"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Product/CreateStocktaking": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Stocktaking"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Stocktaking"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Stocktaking"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/Product/CreateStocktakingList": {
+            "post": {
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Stocktaking"
+                                }
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Stocktaking"
+                                }
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/Stocktaking"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProductSlipServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "InvoiceLine": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "integer",
+                        "format": "int32",
+                        "readOnly": true
+                    },
+                    "lineTypeEnum": {
+                        "$ref": "#/components/schemas/InvoiceLineTypeEnum"
+                    },
+                    "masterCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "typeStr": {
+                        "type": "string",
+                        "nullable": true,
+                        "readOnly": true
+                    },
+                    "orderReference": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "dbFields": {
+                        "$ref": "#/components/schemas/InvoiceLineDBFields"
+                    },
+                    "quantity": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "price": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "vatRate": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "vatIncluded": {
+                        "type": "boolean"
+                    },
+                    "unitCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "unitConv1": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "unitConv2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "variantCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "variantName": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "serialNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "serialNumbers": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    },
+                    "discountCalcType": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "discount": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "discountRate": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "InvoiceLineDBFields": {
+                "type": "object",
+                "properties": {
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "stockRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "variantRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "stFicheRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "uomRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "usRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "ordTransRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "InvoiceLineTypeEnum": {
+                "enum": [
+                    0,
+                    2,
+                    4
+                ],
+                "type": "integer",
+                "format": "int32"
+            },
+            "LProduct": {
+                "type": "object",
+                "properties": {
+                    "cardType": {
+                        "$ref": "#/components/schemas/ProductTypeEnum"
+                    },
+                    "code": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "name2": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "unitSetCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "groupCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode2": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode3": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode4": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode5": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "producerCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "b2CCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "markCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "vat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sellVat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "returnVat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sellPrVat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "returnPrVat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "paymentCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "eBusinessCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "useFMM": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "useFPurch": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "useFSales": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "shelfLife": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "shelfDate": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "modifiedDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "LProductSlip": {
+                "type": "object",
+                "properties": {
+                    "trCode": {
+                        "$ref": "#/components/schemas/ProductSlipTypeEnum"
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "slipNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "docNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "specialCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "divisionNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "departmentNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "factoryNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "wareHouseNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "wareHouseNr2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "lines": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InvoiceLine"
+                        },
+                        "nullable": true
+                    },
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "Price": {
+                "type": "object",
+                "properties": {
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "type": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "cardRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "clientCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "price_": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "currency": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "begDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "endDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "vat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "unitSetLineRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "modifiedDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "version": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "PriceServiceResult": {
+                "type": "object",
+                "properties": {
+                    "returnCode": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "success": {
+                        "type": "boolean",
+                        "readOnly": true
+                    },
+                    "recordCount": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "priceList": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Price"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "Product": {
+                "type": "object",
+                "properties": {
+                    "cardType": {
+                        "$ref": "#/components/schemas/ProductTypeEnum"
+                    },
+                    "code": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "name2": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "unitSetCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "groupCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode2": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode3": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode4": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "speCode5": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "producerCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "b2CCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "markCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "vat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sellVat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "returnVat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sellPrVat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "returnPrVat": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "paymentCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "eBusinessCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "useFMM": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "useFPurch": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "useFSales": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "shelfLife": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "shelfDate": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ProductServiceResult": {
+                "type": "object",
+                "properties": {
+                    "returnCode": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "success": {
+                        "type": "boolean",
+                        "readOnly": true
+                    },
+                    "productCount": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "productList": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LProduct"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ProductSlipServiceResult": {
+                "type": "object",
+                "properties": {
+                    "returnCode": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "success": {
+                        "type": "boolean",
+                        "readOnly": true
+                    },
+                    "productSlipCount": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "productSlipList": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/LProductSlip"
+                        },
+                        "nullable": true
+                    },
+                    "rfidSqlStatement": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "ProductSlipTypeEnum": {
+                "enum": [
+                    11,
+                    12,
+                    13,
+                    14,
+                    25,
+                    50,
+                    51
+                ],
+                "type": "integer",
+                "format": "int32"
+            },
+            "ProductTypeEnum": {
+                "enum": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    10,
+                    11,
+                    12,
+                    13
+                ],
+                "type": "integer",
+                "format": "int32"
+            },
+            "RFIDProductSlip": {
+                "type": "object",
+                "properties": {
+                    "trCode": {
+                        "$ref": "#/components/schemas/ProductSlipTypeEnum"
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "slipNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "docNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "specialCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "divisionNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "departmentNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "factoryNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "wareHouseNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "wareHouseNr2": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "lines": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/InvoiceLine"
+                        },
+                        "nullable": true
+                    },
+                    "rfidLines": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "StockTakingLineTypeEnum": {
+                "enum": [
+                    1,
+                    2,
+                    3
+                ],
+                "type": "integer",
+                "format": "int32"
+            },
+            "Stocktaking": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "docNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "specialCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "divisionNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "departmentNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "factoryNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "wareHouseNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "stockTakingLineType": {
+                        "$ref": "#/components/schemas/StockTakingLineTypeEnum"
+                    },
+                    "lines": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/StocktakingLine"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "StocktakingLine": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "quantity": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "price": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                },
+                "additionalProperties": false
+            }
+        }
+    }
+}

@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IVME_TRANSFER_BANKFICHE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FicheNumber" Type="varchar" MaxLength="30" />
+          <Property Name="FicheType" Type="varchar" MaxLength="100" />
+          <Property Name="TransferDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_BANKFICHE_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FicheNumber" Type="varchar" MaxLength="30" />
+          <Property Name="ERRLOG" Type="varchar" MaxLength="1000" />
+          <Property Name="ERRDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CLFICHE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FicheNumber" Type="varchar" MaxLength="30" />
+          <Property Name="FicheType" Type="varchar" MaxLength="100" />
+          <Property Name="TransferDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CLFICHE_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FicheNumber" Type="varchar" MaxLength="30" />
+          <Property Name="ERRLOG" Type="varchar" MaxLength="1000" />
+          <Property Name="ERRDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CUSTOMER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurrAccCode" Type="varchar" MaxLength="30" />
+          <Property Name="TransferDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CUSTOMER_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurrAccCode" Type="varchar" MaxLength="30" />
+          <Property Name="ERRLOG" Type="varchar" MaxLength="1000" />
+          <Property Name="ERRDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_INVOICE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceNumber" Type="varchar" MaxLength="30" />
+          <Property Name="InvoiceType" Type="varchar" MaxLength="100" />
+          <Property Name="TransferDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_INVOICE_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceNumber" Type="varchar" MaxLength="30" />
+          <Property Name="ERRLOG" Type="varchar" MaxLength="1000" />
+          <Property Name="ERRDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_PRODUCT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" MaxLength="50" />
+          <Property Name="TransferDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_PRODUCT_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" MaxLength="30" />
+          <Property Name="ERRLOG" Type="varchar" MaxLength="1000" />
+          <Property Name="ERRDATE" Type="datetime" />
+        </EntityType>
+        <Function Name="sp_BankFicheList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ficheType" Type="int" Mode="In" />
+          <Parameter Name="p_startdate" Type="varchar" Mode="In" />
+          <Parameter Name="p_enddate" Type="varchar" Mode="In" />
+          <Parameter Name="p_ficheNr" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_CHF_KrediKarti" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="p_startdate" Type="varchar" Mode="In" />
+          <Parameter Name="p_enddate" Type="varchar" Mode="In" />
+          <Parameter Name="p_ficheNr" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_IvmeCustomerList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_IvmeInvoiceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="invoiceType" Type="varchar" Mode="In" />
+          <Parameter Name="p_startdate" Type="varchar" Mode="In" />
+          <Parameter Name="p_enddate" Type="varchar" Mode="In" />
+          <Parameter Name="p_invoiceNr" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_IvmeProductList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="DBModelStoreContainer">
+          <EntitySet Name="IVME_TRANSFER_BANKFICHE" EntityType="Self.IVME_TRANSFER_BANKFICHE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_BANKFICHE_ERR" EntityType="Self.IVME_TRANSFER_BANKFICHE_ERR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_CLFICHE" EntityType="Self.IVME_TRANSFER_CLFICHE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_CLFICHE_ERR" EntityType="Self.IVME_TRANSFER_CLFICHE_ERR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_CUSTOMER" EntityType="Self.IVME_TRANSFER_CUSTOMER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_CUSTOMER_ERR" EntityType="Self.IVME_TRANSFER_CUSTOMER_ERR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_INVOICE" EntityType="Self.IVME_TRANSFER_INVOICE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_INVOICE_ERR" EntityType="Self.IVME_TRANSFER_INVOICE_ERR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_PRODUCT" EntityType="Self.IVME_TRANSFER_PRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_PRODUCT_ERR" EntityType="Self.IVME_TRANSFER_PRODUCT_ERR" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IVME_TRANSFER_BANKFICHE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FicheNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FicheType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_BANKFICHE_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FicheNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ERRLOG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ERRDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CLFICHE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FicheNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FicheType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CLFICHE_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FicheNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ERRLOG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ERRDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CUSTOMER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrAccCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CUSTOMER_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurrAccCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ERRLOG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ERRDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_INVOICE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_INVOICE_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvoiceNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ERRLOG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ERRDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_PRODUCT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_PRODUCT_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ItemCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ERRLOG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ERRDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IVME_TRANSFER_BANKFICHE" EntityType="Self.IVME_TRANSFER_BANKFICHE" />
+          <EntitySet Name="IVME_TRANSFER_BANKFICHE_ERR" EntityType="Self.IVME_TRANSFER_BANKFICHE_ERR" />
+          <EntitySet Name="IVME_TRANSFER_CLFICHE" EntityType="Self.IVME_TRANSFER_CLFICHE" />
+          <EntitySet Name="IVME_TRANSFER_CLFICHE_ERR" EntityType="Self.IVME_TRANSFER_CLFICHE_ERR" />
+          <EntitySet Name="IVME_TRANSFER_CUSTOMER" EntityType="Self.IVME_TRANSFER_CUSTOMER" />
+          <EntitySet Name="IVME_TRANSFER_CUSTOMER_ERR" EntityType="Self.IVME_TRANSFER_CUSTOMER_ERR" />
+          <EntitySet Name="IVME_TRANSFER_INVOICE" EntityType="Self.IVME_TRANSFER_INVOICE" />
+          <EntitySet Name="IVME_TRANSFER_INVOICE_ERR" EntityType="Self.IVME_TRANSFER_INVOICE_ERR" />
+          <EntitySet Name="IVME_TRANSFER_PRODUCT" EntityType="Self.IVME_TRANSFER_PRODUCT" />
+          <EntitySet Name="IVME_TRANSFER_PRODUCT_ERR" EntityType="Self.IVME_TRANSFER_PRODUCT_ERR" />
+          <FunctionImport Name="sp_IvmeCustomerList" ReturnType="Collection(DBModel.sp_IvmeCustomerList_Result)" />
+          <FunctionImport Name="sp_IvmeProductList" ReturnType="Collection(DBModel.sp_IvmeProductList_Result)" />
+          <FunctionImport Name="sp_CHF_KrediKarti" ReturnType="Collection(DBModel.sp_CHF_KrediKarti_Result)">
+            <Parameter Name="p_startdate" Mode="In" Type="String" />
+            <Parameter Name="p_enddate" Mode="In" Type="String" />
+            <Parameter Name="p_ficheNr" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_BankFicheList" ReturnType="Collection(DBModel.sp_BankFicheList_Result)">
+            <Parameter Name="ficheType" Mode="In" Type="Int32" />
+            <Parameter Name="p_startdate" Mode="In" Type="String" />
+            <Parameter Name="p_enddate" Mode="In" Type="String" />
+            <Parameter Name="p_ficheNr" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_IvmeInvoiceList" ReturnType="Collection(DBModel.sp_IvmeInvoiceList_Result)">
+            <Parameter Name="invoiceType" Mode="In" Type="String" />
+            <Parameter Name="p_startdate" Mode="In" Type="String" />
+            <Parameter Name="p_enddate" Mode="In" Type="String" />
+            <Parameter Name="p_invoiceNr" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_IvmeCustomerList_Result">
+          <Property Type="Byte" Name="CurrAccTypeCode" Nullable="false" />
+          <Property Type="String" Name="CurrAccCode" Nullable="true" MaxLength="30" />
+          <Property Type="Decimal" Name="CompanyCode" Nullable="false" Precision="4" Scale="0" />
+          <Property Type="String" Name="OfficeCode" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="TitleCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="FirstName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="LastName" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="FirstLastName" Nullable="true" MaxLength="121" />
+          <Property Type="String" Name="FullName" Nullable="true" MaxLength="182" />
+          <Property Type="Boolean" Name="IsIndividualAcc" Nullable="false" />
+          <Property Type="String" Name="TaxOfficeCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TaxOffice" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="TaxNumber" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="IdentityNum" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="MersisNum" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CurrencyCode" Nullable="true" MaxLength="10" />
+          <Property Type="Byte" Name="CustomerTypeCode" Nullable="false" />
+          <Property Type="String" Name="GLTypeCode" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CurrAccDescription" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="AddressTypeCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="AddressTypeDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="DistrictCode" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="DistrictDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CityCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CityDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="StateCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="StateDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CountryCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CountryDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="SiteName" Nullable="true" MaxLength="20" />
+          <Property Type="Int16" Name="FloorNum" Nullable="true" />
+          <Property Type="Int16" Name="DoorNum" Nullable="true" />
+          <Property Type="String" Name="Street" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Boulevard" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="EMail" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Phone1" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Phone2" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_IvmeProductList_Result">
+          <Property Type="Int32" Name="ItemTaxGrCode" Nullable="true" />
+          <Property Type="String" Name="ProductHierarchyLevel01" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductHierarchyLevel02" Nullable="true" MaxLength="111" />
+          <Property Type="String" Name="ProductHierarchyLevel03" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductHierarchyLevel04" Nullable="true" MaxLength="111" />
+          <Property Type="String" Name="UnitOfMeasureCode1" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_CHF_KrediKarti_Result">
+          <Property Type="Guid" Name="CreditCardPaymentLineID" Nullable="false" />
+          <Property Type="String" Name="CreditCardPaymentNumber" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="CreditCardPaymentTypeDescription" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="PaymentDate" Nullable="false" />
+          <Property Type="Time" Name="PaymentTime" Nullable="false" />
+          <Property Type="String" Name="DocumentNumber" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="RefNumber" Nullable="false" MaxLength="30" />
+          <Property Type="Byte" Name="CurrAccTypeCode" Nullable="false" />
+          <Property Type="String" Name="CariKod" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="CariUnvan" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="AcquirerBankCode" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="BankCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CreditCardTypeDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="CreditCardTypeCode" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="LineDescription" Nullable="false" MaxLength="200" />
+          <Property Type="Decimal" Name="CurrAccAmount" Nullable="false" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="sp_BankFicheList_Result">
+          <Property Type="String" Name="BankTransNumber" Nullable="false" MaxLength="30" />
+          <Property Type="Byte" Name="BankTransTypeCode" Nullable="false" />
+          <Property Type="String" Name="BankTransTypeDescription" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="BankTransNumber1" Nullable="false" MaxLength="30" />
+          <Property Type="DateTime" Name="DocumentDate" Nullable="false" />
+          <Property Type="Time" Name="DocumentTime" Nullable="false" />
+          <Property Type="String" Name="DocumentNumber" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="RefNumber" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="200" />
+          <Property Type="Guid" Name="BankLineID" Nullable="false" />
+          <Property Type="Byte" Name="BankCurrAccTypeCode" Nullable="false" />
+          <Property Type="String" Name="BankCurrAccCode" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="BankCode" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="LogoBankCode" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="BankaSubeKodu" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="IBAN" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="BankaHesapNo" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="HesapAciklama" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="LineDescription" Nullable="false" />
+          <Property Type="DateTime" Name="DueDate" Nullable="false" />
+          <Property Type="String" Name="BankReferenceNumber" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="BankConfirmationNumber" Nullable="false" MaxLength="30" />
+          <Property Type="Byte" Name="CurrAccTypeCode" Nullable="true" />
+          <Property Type="String" Name="CariKod" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="CariHesapUnvan" Nullable="true" MaxLength="200" />
+          <Property Type="Boolean" Name="IsBankDebited" Nullable="false" />
+          <Property Type="String" Name="Doc_CurrencyCode" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="Doc_Amount" Nullable="false" Precision="19" />
+          <Property Type="String" Name="Com_CurrencyCode" Nullable="false" MaxLength="10" />
+          <Property Type="Double" Name="Com_ExchangeRate" Nullable="false" />
+          <Property Type="Decimal" Name="Com_Amount" Nullable="false" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="sp_IvmeInvoiceList_Result">
+          <Property Type="String" Name="InvoiceRef" Nullable="false" MaxLength="30" />
+          <Property Type="Byte" Name="InvoiceTypeCode" Nullable="false" />
+          <Property Type="String" Name="InvoiceType" Nullable="false" MaxLength="5" />
+          <Property Type="Int32" Name="LineType" Nullable="false" />
+          <Property Type="Boolean" Name="IsReturn" Nullable="false" />
+          <Property Type="String" Name="InvoiceSeries" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="InvoiceSeriesNumber" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="InvoiceDate" Nullable="false" />
+          <Property Type="String" Name="TaxType" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="ColorCode" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ItemDim1Code" Nullable="false" MaxLength="10" />
+          <Property Type="Boolean" Name="IsEInvoice" Nullable="false" />
+          <Property Type="String" Name="EInvoiceNumber" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="ProductHierarchyLevel" Nullable="true" MaxLength="414" />
+          <Property Type="String" Name="UnitSet" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="TrCurrencyCode" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="TrCurrencyRate" Nullable="true" Precision="19" />
+          <Property Type="Double" Name="Quantity" Nullable="false" />
+          <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" />
+          <Property Type="String" Name="CurrencyCode" Nullable="false" MaxLength="10" />
+          <Property Type="Double" Name="CurrencyRate" Nullable="false" />
+          <Property Type="Decimal" Name="LocalPrice" Nullable="false" Precision="19" />
+          <Property Type="Int32" Name="ProductVatRate" Nullable="true" />
+          <Property Type="String" Name="VatCode" Nullable="false" MaxLength="10" />
+          <Property Type="Single" Name="VatRate" Nullable="false" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="Discount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="VatBase" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="VatAmount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="NetAmount" Nullable="false" Precision="19" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBModelStoreContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="IVME_TRANSFER_BANKFICHE">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_BANKFICHE">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_BANKFICHE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FicheNumber" ColumnName="FicheNumber" />
+                <ScalarProperty Name="FicheType" ColumnName="FicheType" />
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_BANKFICHE_ERR">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_BANKFICHE_ERR">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_BANKFICHE_ERR">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FicheNumber" ColumnName="FicheNumber" />
+                <ScalarProperty Name="ERRLOG" ColumnName="ERRLOG" />
+                <ScalarProperty Name="ERRDATE" ColumnName="ERRDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_CLFICHE">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_CLFICHE">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_CLFICHE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FicheNumber" ColumnName="FicheNumber" />
+                <ScalarProperty Name="FicheType" ColumnName="FicheType" />
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_CLFICHE_ERR">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_CLFICHE_ERR">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_CLFICHE_ERR">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FicheNumber" ColumnName="FicheNumber" />
+                <ScalarProperty Name="ERRLOG" ColumnName="ERRLOG" />
+                <ScalarProperty Name="ERRDATE" ColumnName="ERRDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_CUSTOMER">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_CUSTOMER">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_CUSTOMER">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CurrAccCode" ColumnName="CurrAccCode" />
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_CUSTOMER_ERR">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_CUSTOMER_ERR">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_CUSTOMER_ERR">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CurrAccCode" ColumnName="CurrAccCode" />
+                <ScalarProperty Name="ERRLOG" ColumnName="ERRLOG" />
+                <ScalarProperty Name="ERRDATE" ColumnName="ERRDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_INVOICE">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_INVOICE">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_INVOICE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_INVOICE_ERR">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_INVOICE_ERR">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_INVOICE_ERR">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="ERRLOG" ColumnName="ERRLOG" />
+                <ScalarProperty Name="ERRDATE" ColumnName="ERRDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_PRODUCT">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_PRODUCT">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_PRODUCT">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_PRODUCT_ERR">
+            <EntityTypeMapping TypeName="DBModel.IVME_TRANSFER_PRODUCT_ERR">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_PRODUCT_ERR">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="ERRLOG" ColumnName="ERRLOG" />
+                <ScalarProperty Name="ERRDATE" ColumnName="ERRDATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_IvmeCustomerList" FunctionName="DBModel.Store.sp_IvmeCustomerList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBModel.sp_IvmeCustomerList_Result">
+                <ScalarProperty Name="CurrAccTypeCode" ColumnName="CurrAccTypeCode" />
+                <ScalarProperty Name="CurrAccCode" ColumnName="CurrAccCode" />
+                <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+                <ScalarProperty Name="OfficeCode" ColumnName="OfficeCode" />
+                <ScalarProperty Name="TitleCode" ColumnName="TitleCode" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstLastName" ColumnName="FirstLastName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="IsIndividualAcc" ColumnName="IsIndividualAcc" />
+                <ScalarProperty Name="TaxOfficeCode" ColumnName="TaxOfficeCode" />
+                <ScalarProperty Name="TaxOffice" ColumnName="TaxOffice" />
+                <ScalarProperty Name="TaxNumber" ColumnName="TaxNumber" />
+                <ScalarProperty Name="IdentityNum" ColumnName="IdentityNum" />
+                <ScalarProperty Name="MersisNum" ColumnName="MersisNum" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="CustomerTypeCode" ColumnName="CustomerTypeCode" />
+                <ScalarProperty Name="GLTypeCode" ColumnName="GLTypeCode" />
+                <ScalarProperty Name="CurrAccDescription" ColumnName="CurrAccDescription" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="AddressTypeCode" ColumnName="AddressTypeCode" />
+                <ScalarProperty Name="AddressTypeDescription" ColumnName="AddressTypeDescription" />
+                <ScalarProperty Name="DistrictCode" ColumnName="DistrictCode" />
+                <ScalarProperty Name="DistrictDescription" ColumnName="DistrictDescription" />
+                <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+                <ScalarProperty Name="CityDescription" ColumnName="CityDescription" />
+                <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+                <ScalarProperty Name="StateDescription" ColumnName="StateDescription" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="CountryDescription" ColumnName="CountryDescription" />
+                <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+                <ScalarProperty Name="FloorNum" ColumnName="FloorNum" />
+                <ScalarProperty Name="DoorNum" ColumnName="DoorNum" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="Boulevard" ColumnName="Boulevard" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_IvmeProductList" FunctionName="DBModel.Store.sp_IvmeProductList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBModel.sp_IvmeProductList_Result">
+                <ScalarProperty Name="ItemTaxGrCode" ColumnName="ItemTaxGrCode" />
+                <ScalarProperty Name="ProductHierarchyLevel01" ColumnName="ProductHierarchyLevel01" />
+                <ScalarProperty Name="ProductHierarchyLevel02" ColumnName="ProductHierarchyLevel02" />
+                <ScalarProperty Name="ProductHierarchyLevel03" ColumnName="ProductHierarchyLevel03" />
+                <ScalarProperty Name="ProductHierarchyLevel04" ColumnName="ProductHierarchyLevel04" />
+                <ScalarProperty Name="UnitOfMeasureCode1" ColumnName="UnitOfMeasureCode1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_CHF_KrediKarti" FunctionName="DBModel.Store.sp_CHF_KrediKarti">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBModel.sp_CHF_KrediKarti_Result">
+                <ScalarProperty Name="CreditCardPaymentLineID" ColumnName="CreditCardPaymentLineID" />
+                <ScalarProperty Name="CreditCardPaymentNumber" ColumnName="CreditCardPaymentNumber" />
+                <ScalarProperty Name="CreditCardPaymentTypeDescription" ColumnName="CreditCardPaymentTypeDescription" />
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="PaymentTime" ColumnName="PaymentTime" />
+                <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+                <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+                <ScalarProperty Name="CurrAccTypeCode" ColumnName="CurrAccTypeCode" />
+                <ScalarProperty Name="CariKod" ColumnName="CariKod" />
+                <ScalarProperty Name="CariUnvan" ColumnName="CariUnvan" />
+                <ScalarProperty Name="AcquirerBankCode" ColumnName="AcquirerBankCode" />
+                <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+                <ScalarProperty Name="CreditCardTypeDescription" ColumnName="CreditCardTypeDescription" />
+                <ScalarProperty Name="CreditCardTypeCode" ColumnName="CreditCardTypeCode" />
+                <ScalarProperty Name="LineDescription" ColumnName="LineDescription" />
+                <ScalarProperty Name="CurrAccAmount" ColumnName="CurrAccAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_BankFicheList" FunctionName="DBModel.Store.sp_BankFicheList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBModel.sp_BankFicheList_Result">
+                <ScalarProperty Name="BankTransNumber" ColumnName="BankTransNumber" />
+                <ScalarProperty Name="BankTransTypeCode" ColumnName="BankTransTypeCode" />
+                <ScalarProperty Name="BankTransTypeDescription" ColumnName="BankTransTypeDescription" />
+                <ScalarProperty Name="BankTransNumber1" ColumnName="BankTransNumber1" />
+                <ScalarProperty Name="DocumentDate" ColumnName="DocumentDate" />
+                <ScalarProperty Name="DocumentTime" ColumnName="DocumentTime" />
+                <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+                <ScalarProperty Name="RefNumber" ColumnName="RefNumber" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="BankLineID" ColumnName="BankLineID" />
+                <ScalarProperty Name="BankCurrAccTypeCode" ColumnName="BankCurrAccTypeCode" />
+                <ScalarProperty Name="BankCurrAccCode" ColumnName="BankCurrAccCode" />
+                <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+                <ScalarProperty Name="LogoBankCode" ColumnName="LogoBankCode" />
+                <ScalarProperty Name="BankaSubeKodu" ColumnName="BankaSubeKodu" />
+                <ScalarProperty Name="IBAN" ColumnName="IBAN" />
+                <ScalarProperty Name="BankaHesapNo" ColumnName="BankaHesapNo" />
+                <ScalarProperty Name="HesapAciklama" ColumnName="HesapAciklama" />
+                <ScalarProperty Name="LineDescription" ColumnName="LineDescription" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+                <ScalarProperty Name="BankReferenceNumber" ColumnName="BankReferenceNumber" />
+                <ScalarProperty Name="BankConfirmationNumber" ColumnName="BankConfirmationNumber" />
+                <ScalarProperty Name="CurrAccTypeCode" ColumnName="CurrAccTypeCode" />
+                <ScalarProperty Name="CariKod" ColumnName="CariKod" />
+                <ScalarProperty Name="CariHesapUnvan" ColumnName="CariHesapUnvan" />
+                <ScalarProperty Name="IsBankDebited" ColumnName="IsBankDebited" />
+                <ScalarProperty Name="Doc_CurrencyCode" ColumnName="Doc_CurrencyCode" />
+                <ScalarProperty Name="Doc_Amount" ColumnName="Doc_Amount" />
+                <ScalarProperty Name="Com_CurrencyCode" ColumnName="Com_CurrencyCode" />
+                <ScalarProperty Name="Com_ExchangeRate" ColumnName="Com_ExchangeRate" />
+                <ScalarProperty Name="Com_Amount" ColumnName="Com_Amount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_IvmeInvoiceList" FunctionName="DBModel.Store.sp_IvmeInvoiceList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DBModel.sp_IvmeInvoiceList_Result">
+                <ScalarProperty Name="InvoiceRef" ColumnName="InvoiceRef" />
+                <ScalarProperty Name="InvoiceTypeCode" ColumnName="InvoiceTypeCode" />
+                <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+                <ScalarProperty Name="LineType" ColumnName="LineType" />
+                <ScalarProperty Name="IsReturn" ColumnName="IsReturn" />
+                <ScalarProperty Name="InvoiceSeries" ColumnName="InvoiceSeries" />
+                <ScalarProperty Name="InvoiceSeriesNumber" ColumnName="InvoiceSeriesNumber" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+                <ScalarProperty Name="ItemDim1Code" ColumnName="ItemDim1Code" />
+                <ScalarProperty Name="IsEInvoice" ColumnName="IsEInvoice" />
+                <ScalarProperty Name="EInvoiceNumber" ColumnName="EInvoiceNumber" />
+                <ScalarProperty Name="ProductHierarchyLevel" ColumnName="ProductHierarchyLevel" />
+                <ScalarProperty Name="UnitSet" ColumnName="UnitSet" />
+                <ScalarProperty Name="TrCurrencyCode" ColumnName="TrCurrencyCode" />
+                <ScalarProperty Name="TrCurrencyRate" ColumnName="TrCurrencyRate" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="CurrencyCode" ColumnName="CurrencyCode" />
+                <ScalarProperty Name="CurrencyRate" ColumnName="CurrencyRate" />
+                <ScalarProperty Name="LocalPrice" ColumnName="LocalPrice" />
+                <ScalarProperty Name="ProductVatRate" ColumnName="ProductVatRate" />
+                <ScalarProperty Name="VatCode" ColumnName="VatCode" />
+                <ScalarProperty Name="VatRate" ColumnName="VatRate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="VatBase" ColumnName="VatBase" />
+                <ScalarProperty Name="VatAmount" ColumnName="VatAmount" />
+                <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

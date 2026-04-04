@@ -1,0 +1,200 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Bank Api",
+        "version": "v1"
+    },
+    "paths": {
+        "/api/Bank/CreateBankSlip": {
+            "post": {
+                "tags": [
+                    "Bank"
+                ],
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "style": "form",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BankFiche"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BankFiche"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BankFiche"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BankFicheServiceResult"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BankFicheServiceResult"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BankFicheServiceResult"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "BankFiche": {
+                "type": "object",
+                "properties": {
+                    "trCode": {
+                        "$ref": "#/components/schemas/BankFicheTypeEnum"
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "slipNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "specialCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "divisionNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "departmentNr": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "dbFields": {
+                        "$ref": "#/components/schemas/BankFicheDBFields"
+                    },
+                    "bankFicheLines": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/BankFicheLine"
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "BankFicheDBFields": {
+                "type": "object",
+                "properties": {
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "modifiedDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "BankFicheLine": {
+                "type": "object",
+                "properties": {
+                    "customerCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "specialCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "bankCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "bankAccountCode": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "approveNr": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "docNumber": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "credit": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "debit": {
+                        "type": "number",
+                        "format": "double"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "BankFicheServiceResult": {
+                "type": "object",
+                "properties": {
+                    "returnCode": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "description": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "success": {
+                        "type": "boolean",
+                        "readOnly": true
+                    },
+                    "logicalRef": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "BankFicheTypeEnum": {
+                "enum": [
+                    3,
+                    4
+                ],
+                "type": "integer",
+                "format": "int32"
+            }
+        }
+    }
+}

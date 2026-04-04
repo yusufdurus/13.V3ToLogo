@@ -1,0 +1,38 @@
+# Her seyi yoksay
+*
+
+# Dizin gezintisine izin ver
+!*/
+
+# .gitignore ve README takip edilsin
+!.gitignore
+!README.md
+
+# ===== BEYAZ LISTE =====
+# 1) Dilvin/SRC icindeki kaynak kodlar
+!13.V3ToLogo.Dilvin/SRC/**
+
+# 2) Dilvin/DBScript
+!13.V3ToLogo.Dilvin/DBScript/**
+
+# 3) Dilvin/apiJson
+!13.V3ToLogo.Dilvin/apiJson/**
+
+# 4) ETicaret/ImportToLogo icindeki kaynak kodlar
+!13.V3ToLogo.ETicaret/ImportToLogo/**
+
+# 5) ETicaret/DBScript
+!13.V3ToLogo.ETicaret/DBScript/**
+
+# 6) ETicaret/apiJson
+!13.V3ToLogo.ETicaret/apiJson/**
+
+# ===== .NET BUILD CIKTILARI (her yerde yoksay) =====
+**/bin/
+**/obj/
+**/.vs/
+**/*.suo
+**/*.user
+**/*.cache
+**/packages/
+**/*.pfx

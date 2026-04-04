@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="LogoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IVME_TRANSFER_CUSTOMER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurrAccCode" Type="varchar" MaxLength="30" />
+          <Property Name="TransferDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CUSTOMER_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurrAccCode" Type="varchar" MaxLength="30" />
+          <Property Name="ERRLOG" Type="varchar" MaxLength="1000" />
+          <Property Name="ERRDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_INVOICE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceNumber" Type="varchar" MaxLength="30" />
+          <Property Name="InvoiceType" Type="varchar" MaxLength="100" />
+          <Property Name="TransferDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_INVOICE_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InvoiceNumber" Type="varchar" MaxLength="30" />
+          <Property Name="ERRLOG" Type="varchar" MaxLength="1000" />
+          <Property Name="ERRDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_PRODUCT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" MaxLength="50" />
+          <Property Name="TransferDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_PRODUCT_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ItemCode" Type="varchar" MaxLength="30" />
+          <Property Name="ERRLOG" Type="varchar" MaxLength="1000" />
+          <Property Name="ERRDATE" Type="datetime" />
+        </EntityType>
+        <Function Name="sp_InvoiceTransferred" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="invoiceNr" Type="varchar" Mode="In" />
+          <Parameter Name="invoiceType" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_IvmeCustomerCommList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CURRACCCODE" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_IvmeCustomerList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_IvmeInvoiceList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_IvmeProductList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="LogoModelStoreContainer">
+          <EntitySet Name="IVME_TRANSFER_CUSTOMER" EntityType="Self.IVME_TRANSFER_CUSTOMER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_CUSTOMER_ERR" EntityType="Self.IVME_TRANSFER_CUSTOMER_ERR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_INVOICE" EntityType="Self.IVME_TRANSFER_INVOICE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_INVOICE_ERR" EntityType="Self.IVME_TRANSFER_INVOICE_ERR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_PRODUCT" EntityType="Self.IVME_TRANSFER_PRODUCT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IVME_TRANSFER_PRODUCT_ERR" EntityType="Self.IVME_TRANSFER_PRODUCT_ERR" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LogoModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="LogoEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="IVME_TRANSFER_CUSTOMER" EntityType="LogoModel.IVME_TRANSFER_CUSTOMER" />
+          <EntitySet Name="IVME_TRANSFER_CUSTOMER_ERR" EntityType="LogoModel.IVME_TRANSFER_CUSTOMER_ERR" />
+          <EntitySet Name="IVME_TRANSFER_INVOICE" EntityType="LogoModel.IVME_TRANSFER_INVOICE" />
+          <EntitySet Name="IVME_TRANSFER_INVOICE_ERR" EntityType="LogoModel.IVME_TRANSFER_INVOICE_ERR" />
+          <EntitySet Name="IVME_TRANSFER_PRODUCT" EntityType="LogoModel.IVME_TRANSFER_PRODUCT" />
+          <EntitySet Name="IVME_TRANSFER_PRODUCT_ERR" EntityType="LogoModel.IVME_TRANSFER_PRODUCT_ERR" />
+          <FunctionImport Name="sp_IvmeCustomerCommList" ReturnType="Collection(LogoModel.sp_IvmeCustomerCommList_Result)">
+          <Parameter Name="CURRACCCODE" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_IvmeCustomerList" ReturnType="Collection(LogoModel.sp_IvmeCustomerList_Result)" />
+          <FunctionImport Name="sp_IvmeInvoiceList" ReturnType="Collection(LogoModel.sp_IvmeInvoiceList_Result)" />
+          <FunctionImport Name="sp_IvmeProductList" ReturnType="Collection(LogoModel.sp_IvmeProductList_Result)" />
+          <FunctionImport Name="sp_InvoiceTransferred">
+            <Parameter Name="invoiceNr" Mode="In" Type="String" />
+            <Parameter Name="invoiceType" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="IVME_TRANSFER_CUSTOMER">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="CurrAccCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_CUSTOMER_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="CurrAccCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ERRLOG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ERRDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_INVOICE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="InvoiceNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_INVOICE_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="InvoiceNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ERRLOG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ERRDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_PRODUCT">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ItemCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TransferDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="IVME_TRANSFER_PRODUCT_ERR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ItemCode" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ERRLOG" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="ERRDATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <ComplexType Name="sp_IvmeCustomerCommList_Result">
+          <Property Type="String" Name="CurrAccCode" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="1000" />
+          <Property Type="String" Name="ZipCode" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="CityDescription" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="CountryDescription" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="CurrAccPostalAddress_TaxOfficeCode" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="TaxOfficeDescription" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="CurrAccPostalAddress_TaxNumber" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="CommunicationTypeCode" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="CommunicationTypeDescription" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="ContactLastName" Nullable="false" MaxLength="60" />
+          <Property Type="String" Name="CommAddress" Nullable="false" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_IvmeCustomerList_Result">
+          <Property Type="String" Name="CurrAccCode" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="cdCurrAccDesc" Nullable="false" MaxLength="200" />
+        </ComplexType>
+        <ComplexType Name="sp_IvmeInvoiceList_Result">
+          <Property Type="String" Name="InvoiceRef" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="LineType" Nullable="false" />
+          <Property Type="Boolean" Name="IsReturn" Nullable="false" />
+          <Property Type="String" Name="InvoiceSeries" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="InvoiceSeriesNumber" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="InvoiceDate" Nullable="false" />
+          <Property Type="String" Name="TaxType" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="CustomerCode" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="ProductHierarchyLevel04" Nullable="false" MaxLength="2" />
+          <Property Type="Int32" Name="ProductTax" Nullable="true" />
+          <Property Type="Double" Name="Quantity" Nullable="true" />
+          <Property Type="String" Name="PriceCurrencyCode" Nullable="false" MaxLength="10" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="38" Scale="17" />
+          <Property Type="Decimal" Name="TotalDiscount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="19" />
+          <Property Type="String" Name="InvoiceType" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="UnitSet" Nullable="false" MaxLength="10" />
+        </ComplexType>
+        <ComplexType Name="sp_IvmeProductList_Result">
+          <Property Type="Int32" Name="ItemTaxGrCode" Nullable="true" />
+          <Property Type="String" Name="ProductHierarchyLevel01" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductHierarchyLevel02" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductHierarchyLevel03" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="ProductHierarchyLevel04" Nullable="true" MaxLength="111" />
+          <Property Type="String" Name="UnitOfMeasureCode1" Nullable="false" MaxLength="10" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LogoModelStoreContainer" CdmEntityContainer="LogoEntities">
+          <EntitySetMapping Name="IVME_TRANSFER_CUSTOMER">
+            <EntityTypeMapping TypeName="LogoModel.IVME_TRANSFER_CUSTOMER">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_CUSTOMER">
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+                <ScalarProperty Name="CurrAccCode" ColumnName="CurrAccCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_CUSTOMER_ERR">
+            <EntityTypeMapping TypeName="LogoModel.IVME_TRANSFER_CUSTOMER_ERR">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_CUSTOMER_ERR">
+                <ScalarProperty Name="ERRDATE" ColumnName="ERRDATE" />
+                <ScalarProperty Name="ERRLOG" ColumnName="ERRLOG" />
+                <ScalarProperty Name="CurrAccCode" ColumnName="CurrAccCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_INVOICE">
+            <EntityTypeMapping TypeName="LogoModel.IVME_TRANSFER_INVOICE">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_INVOICE">
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+                <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_INVOICE_ERR">
+            <EntityTypeMapping TypeName="LogoModel.IVME_TRANSFER_INVOICE_ERR">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_INVOICE_ERR">
+                <ScalarProperty Name="ERRDATE" ColumnName="ERRDATE" />
+                <ScalarProperty Name="ERRLOG" ColumnName="ERRLOG" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_PRODUCT">
+            <EntityTypeMapping TypeName="LogoModel.IVME_TRANSFER_PRODUCT">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_PRODUCT">
+                <ScalarProperty Name="TransferDate" ColumnName="TransferDate" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IVME_TRANSFER_PRODUCT_ERR">
+            <EntityTypeMapping TypeName="LogoModel.IVME_TRANSFER_PRODUCT_ERR">
+              <MappingFragment StoreEntitySet="IVME_TRANSFER_PRODUCT_ERR">
+                <ScalarProperty Name="ERRDATE" ColumnName="ERRDATE" />
+                <ScalarProperty Name="ERRLOG" ColumnName="ERRLOG" />
+                <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_IvmeCustomerCommList" FunctionName="LogoModel.Store.sp_IvmeCustomerCommList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LogoModel.sp_IvmeCustomerCommList_Result">
+                <ScalarProperty Name="CurrAccCode" ColumnName="CurrAccCode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="CityDescription" ColumnName="CityDescription" />
+                <ScalarProperty Name="CountryDescription" ColumnName="CountryDescription" />
+                <ScalarProperty Name="CurrAccPostalAddress_TaxOfficeCode" ColumnName="CurrAccPostalAddress_TaxOfficeCode" />
+                <ScalarProperty Name="TaxOfficeDescription" ColumnName="TaxOfficeDescription" />
+                <ScalarProperty Name="CurrAccPostalAddress_TaxNumber" ColumnName="CurrAccPostalAddress_TaxNumber" />
+                <ScalarProperty Name="CommunicationTypeCode" ColumnName="CommunicationTypeCode" />
+                <ScalarProperty Name="CommunicationTypeDescription" ColumnName="CommunicationTypeDescription" />
+                <ScalarProperty Name="ContactLastName" ColumnName="ContactLastName" />
+                <ScalarProperty Name="CommAddress" ColumnName="CommAddress" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_IvmeCustomerList" FunctionName="LogoModel.Store.sp_IvmeCustomerList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LogoModel.sp_IvmeCustomerList_Result">
+                <ScalarProperty Name="CurrAccCode" ColumnName="CurrAccCode" />
+                <ScalarProperty Name="cdCurrAccDesc" ColumnName="cdCurrAccDesc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_IvmeInvoiceList" FunctionName="LogoModel.Store.sp_IvmeInvoiceList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LogoModel.sp_IvmeInvoiceList_Result">
+                <ScalarProperty Name="InvoiceRef" ColumnName="InvoiceRef" />
+                <ScalarProperty Name="LineType" ColumnName="LineType" />
+                <ScalarProperty Name="IsReturn" ColumnName="IsReturn" />
+                <ScalarProperty Name="InvoiceSeries" ColumnName="InvoiceSeries" />
+                <ScalarProperty Name="InvoiceSeriesNumber" ColumnName="InvoiceSeriesNumber" />
+                <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+                <ScalarProperty Name="ProductHierarchyLevel04" ColumnName="ProductHierarchyLevel04" />
+                <ScalarProperty Name="ProductTax" ColumnName="ProductTax" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="PriceCurrencyCode" ColumnName="PriceCurrencyCode" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="TotalDiscount" ColumnName="TotalDiscount" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+                <ScalarProperty Name="UnitSet" ColumnName="UnitSet" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_IvmeProductList" FunctionName="LogoModel.Store.sp_IvmeProductList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="LogoModel.sp_IvmeProductList_Result">
+                <ScalarProperty Name="ItemTaxGrCode" ColumnName="ItemTaxGrCode" />
+                <ScalarProperty Name="ProductHierarchyLevel01" ColumnName="ProductHierarchyLevel01" />
+                <ScalarProperty Name="ProductHierarchyLevel02" ColumnName="ProductHierarchyLevel02" />
+                <ScalarProperty Name="ProductHierarchyLevel03" ColumnName="ProductHierarchyLevel03" />
+                <ScalarProperty Name="ProductHierarchyLevel04" ColumnName="ProductHierarchyLevel04" />
+                <ScalarProperty Name="UnitOfMeasureCode1" ColumnName="UnitOfMeasureCode1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_InvoiceTransferred" FunctionName="LogoModel.Store.sp_InvoiceTransferred" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="False" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams />
+  </edmx:Designer>
+</edmx:Edmx>
