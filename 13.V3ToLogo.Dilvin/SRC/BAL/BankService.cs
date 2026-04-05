@@ -99,82 +99,78 @@ namespace V3ToLogo.BAL
                     // Dönüş türünü belirtin
                     List<sp_BankFicheList_Result> spResList = entity.Database.SqlQuery<sp_BankFicheList_Result>(sql, parms.ToArray()).ToList();
 
-                    var slipListData = spResList.Select(x => new { x.BankTransNumber, x.DueDate, x.Description, x.BankTransTypeCode, x.BankTransTypeDescription, x.DocumentDate }).Distinct();
-                    RecordCount = slipListData.Count();
+                    RecordCount = spResList.Count;
                     var client = new Client(GetApiBaseUrl(), new System.Net.Http.HttpClient());
-                    foreach (var slipData in slipListData)
+
+                    // BankTransNumber bazlı sayaç: aynı BankTransNumber için 1, 2, 3... şeklinde artan suffix
+                    var slipCounters = new Dictionary<string, int>();
+
+                    foreach (var row in spResList)
                     {
                         try
                         {
-                            log_Ref = slipData.BankTransNumber;
+                            log_Ref = row.BankLineID.ToString();
+
+                            // SlipNumber suffix hesapla
+                            if (!slipCounters.ContainsKey(row.BankTransNumber))
+                                slipCounters[row.BankTransNumber] = 0;
+                            slipCounters[row.BankTransNumber]++;
+                            string slipNumber = row.BankTransNumber + "-" + slipCounters[row.BankTransNumber];
+
                             BankFiche bankFiche = new BankFiche();
-                            bankFiche.SatirTutarGirisTuru = 1; // öndeğer yerel para birimi ile tutar girişi
-                            bankFiche.Date = slipData.DocumentDate;
+                            bankFiche.SatirTutarGirisTuru = row.Doc_CurrencyCode != "TRY" ? 2 : 1;
+                            bankFiche.Date = row.DocumentDate;
                             bankFiche.DepartmentNr = 0;
                             bankFiche.DivisionNr = 0;
-                            bankFiche.SlipNumber = slipData.BankTransNumber;
+                            bankFiche.SlipNumber = slipNumber;
                             bankFiche.AuthCode = "";
-                            bankFiche.Description = slipData.Description;
+                            bankFiche.Description = row.LineDescription;
                             bankFiche.SpecialCode = "V3";
                             switch (ficheType.Trim())
                             {
                                 case "gelenHavale":
-                                    {
-                                        bankFiche.TrCode = BankFicheTypeEnum._3;
-                                    }
+                                    bankFiche.TrCode = BankFicheTypeEnum._3;
                                     break;
                                 case "gonderilenHavale":
-                                    {
-                                        bankFiche.TrCode = BankFicheTypeEnum._4;
-                                    }
+                                    bankFiche.TrCode = BankFicheTypeEnum._4;
                                     break;
-                                default: 
+                                default:
                                     break;
                             }
-                            bankFiche.BankFicheLines = new List<BankFicheLine>();
-                            
 
-                            List<sp_BankFicheList_Result> linesData = spResList.Where(x => x.BankTransNumber == slipData.BankTransNumber).ToList();
-                            for (int i = 0; i < linesData.Count; i++)
-                            {
+                            BankFicheLine line = new BankFicheLine();
+                            line.ApproveNr = row.RefNumber;
+                            line.DocNumber = row.BankTransNumber;
+                            line.SpecialCode = "";
+                            line.CustomerCode = row.CariKod;
+                            line.BankCode = row.LogoBankCode;
+                            line.BankAccountCode = row.BankCurrAccCode;
+                            line.Description = row.LineDescription;
+                            line.Amount = (double)row.Doc_Amount;
+                            line.Amount_TL = (double)row.Com_Amount;
+                            line.XRate = (double)row.Com_ExchangeRate;
 
-                                BankFicheLine line= new BankFicheLine();
-                                line.ApproveNr = linesData[i].RefNumber;
-                                line.DocNumber = linesData[i].DocumentNumber;
-                                line.SpecialCode = "";
-                                line.CustomerCode = linesData[i].CariKod;
-                                line.BankCode = linesData[i].LogoBankCode;
-                                line.BankAccountCode = linesData[i].BankCurrAccCode;
-                                line.Description = linesData[i].Description;
-                                line.Amount = (double)linesData[i].Doc_Amount;
-                                line.Amount_TL = (double)linesData[i].Com_Amount;
-                                line.XRate = (double)linesData[i].Com_ExchangeRate;
-                                if (linesData[i].Doc_CurrencyCode!="TRY")
-                                    bankFiche.SatirTutarGirisTuru = 2; // eğer dövizli işlem ise, satırlar döviz hesaplaması ile yapılsın.
+                            bankFiche.BankFicheLines = new List<BankFicheLine> { line };
 
-                                bankFiche.BankFicheLines.Add(line);
-                            }
-
-                            BankFicheServiceResult res = null;
-                            res = await client.CreateBankSlipAsync(sessionId, bankFiche);
+                            BankFicheServiceResult res = await client.CreateBankSlipAsync(sessionId, bankFiche);
 
                             if (res.ReturnCode == 100)
                             {
-                                var param1 = new SqlParameter("slipNr", slipData.BankTransNumber);
+                                var param1 = new SqlParameter("bankLineId", row.BankLineID);
                                 var param2 = new SqlParameter("ficheType", (int)GeneralBussines.activeTransfer);
 
-                                int affectedRows = entity.Database.ExecuteSqlCommand("sp_BankFicheTransferred @slipNr, @ficheType", param1, param2);
+                                int affectedRows = entity.Database.ExecuteSqlCommand("sp_BankFicheTransferred @bankLineId, @ficheType", param1, param2);
 
                                 TransferCount_Success += 1;
                             }
                             else
                             {
-                                InsertBankErrorLog(slipData.BankTransNumber, res.Description);
+                                InsertBankErrorLog(slipNumber, res.Description);
                                 ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
                                 {
-                                    Id = slipData.BankTransNumber,
-                                    Kod = slipData.BankTransTypeCode.ToString(),
-                                    Aciklama = slipData.Description,
+                                    Id = row.BankTransNumber,
+                                    Kod = row.CariKod,
+                                    Aciklama = row.LineDescription,
                                     Log = res.Description
                                 });
                                 TransferCount_Error += 1;
@@ -188,9 +184,9 @@ namespace V3ToLogo.BAL
                             InsertBankErrorLog(log_Ref, returnValue);
                             ErrorList.Add(new MODEL.GENERAL.TransferErrorItem
                             {
-                                Id = log_Ref,
-                                Kod = slipData.BankTransTypeCode.ToString(),
-                                Aciklama = slipData.Description,
+                                Id = row.BankTransNumber,
+                                Kod = row.CariKod,
+                                Aciklama = row.LineDescription,
                                 Log = ex.Message
                             });
                             TransferCount_Error += 1;
