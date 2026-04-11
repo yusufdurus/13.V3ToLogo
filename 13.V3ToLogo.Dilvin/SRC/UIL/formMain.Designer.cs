@@ -44,14 +44,14 @@ namespace V3ToLogo.UIL
             this.label_malzeme_success = new System.Windows.Forms.Label();
             this.label_malzeme_error = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.eFilterMalzeme = new System.Windows.Forms.TextBox();
+            this.eFilterMalzemelog = new System.Windows.Forms.TextBox();
             this.tabPageCariHesap = new System.Windows.Forms.TabPage();
             this.dgvCariHesap = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
-            this.eFilterCariHesap = new System.Windows.Forms.TextBox();
+            this.eFilterCariHesaplog = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label_cari_error = new System.Windows.Forms.Label();
             this.label_cari_success = new System.Windows.Forms.Label();
@@ -61,13 +61,13 @@ namespace V3ToLogo.UIL
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaBP = new System.Windows.Forms.TextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.dt1_2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.dt1_1 = new System.Windows.Forms.DateTimePicker();
             this.button12 = new System.Windows.Forms.Button();
-            this.eFilterFaturaBP = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaBPlog = new System.Windows.Forms.TextBox();
             this.label_faturaBP_success = new System.Windows.Forms.Label();
             this.label_faturaBP_error = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@ namespace V3ToLogo.UIL
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaR = new System.Windows.Forms.TextBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.dt2_2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -86,53 +86,53 @@ namespace V3ToLogo.UIL
             this.button6 = new System.Windows.Forms.Button();
             this.label_faturaR_success = new System.Windows.Forms.Label();
             this.label_faturaR_error = new System.Windows.Forms.Label();
-            this.eFilterFaturaR = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaRlog = new System.Windows.Forms.TextBox();
             this.tabPageFaturaWS = new System.Windows.Forms.TabPage();
             this.dgvFaturaWS = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaWS = new System.Windows.Forms.TextBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.dt3_2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.dt3_1 = new System.Windows.Forms.DateTimePicker();
             this.button14 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.eFilterFaturaWS = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaWSlog = new System.Windows.Forms.TextBox();
             this.label_faturaWS_success = new System.Windows.Forms.Label();
             this.label_faturaWS_error = new System.Windows.Forms.Label();
-            this.tabPageAlisMasraf = new System.Windows.Forms.TabPage();
-            this.dgvAlisMasraf = new System.Windows.Forms.DataGridView();
+            this.tabPageFaturaEP = new System.Windows.Forms.TabPage();
+            this.dgvFaturaEP = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaEP = new System.Windows.Forms.TextBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.dt4_2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.dt4_1 = new System.Windows.Forms.DateTimePicker();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaEPlog = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPageSatisMasraf = new System.Windows.Forms.TabPage();
-            this.dgvSatisMasraf = new System.Windows.Forms.DataGridView();
+            this.tabPageFaturaEXS = new System.Windows.Forms.TabPage();
+            this.dgvFaturaEXS = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaEXS = new System.Windows.Forms.TextBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.dt5_2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.dt5_1 = new System.Windows.Forms.DateTimePicker();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.eFilterFaturaEXSlog = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPageGelenHavale = new System.Windows.Forms.TabPage();
@@ -141,7 +141,7 @@ namespace V3ToLogo.UIL
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.eFilterBankaGelenHavale = new System.Windows.Forms.TextBox();
             this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.dt6_2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
@@ -150,21 +150,21 @@ namespace V3ToLogo.UIL
             this.button7 = new System.Windows.Forms.Button();
             this.label_gelenhavale_error = new System.Windows.Forms.Label();
             this.label_gelenhavale_success = new System.Windows.Forms.Label();
-            this.eFilterBankaGelenHavale = new System.Windows.Forms.TextBox();
+            this.eFilterBankaGelenHavalelog = new System.Windows.Forms.TextBox();
             this.tabPageGonderilenHavale = new System.Windows.Forms.TabPage();
             this.dgvGonderilenHavale = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.eFilterBankaGonderilenHavale = new System.Windows.Forms.TextBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.dt7_2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.dt7_1 = new System.Windows.Forms.DateTimePicker();
             this.button20 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.eFilterBankaGonderilenHavale = new System.Windows.Forms.TextBox();
+            this.eFilterBankaGonderilenHavalelog = new System.Windows.Forms.TextBox();
             this.label_gonderilenhavale_success = new System.Windows.Forms.Label();
             this.label_gonderilenhavale_error = new System.Windows.Forms.Label();
             this.tabPageKrediKarti = new System.Windows.Forms.TabPage();
@@ -173,14 +173,14 @@ namespace V3ToLogo.UIL
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.eFilterKrediKartiFisi = new System.Windows.Forms.TextBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.dt8_2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.dt8_1 = new System.Windows.Forms.DateTimePicker();
             this.button21 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.eFilterKrediKartiFisi = new System.Windows.Forms.TextBox();
+            this.eFilterKrediKartiFisilog = new System.Windows.Forms.TextBox();
             this.label_kredikarti_success = new System.Windows.Forms.Label();
             this.label_kredikarti_error = new System.Windows.Forms.Label();
             this.tabPageAyarlar = new System.Windows.Forms.TabPage();
@@ -211,11 +211,11 @@ namespace V3ToLogo.UIL
             this.tabPageFaturaWS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaturaWS)).BeginInit();
             this.panel5.SuspendLayout();
-            this.tabPageAlisMasraf.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlisMasraf)).BeginInit();
+            this.tabPageFaturaEP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFaturaEP)).BeginInit();
             this.panel9.SuspendLayout();
-            this.tabPageSatisMasraf.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSatisMasraf)).BeginInit();
+            this.tabPageFaturaEXS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFaturaEXS)).BeginInit();
             this.panel10.SuspendLayout();
             this.tabPageGelenHavale.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGelenHavale)).BeginInit();
@@ -248,8 +248,8 @@ namespace V3ToLogo.UIL
             this.tabControl.Controls.Add(this.tabPageFaturaBP);
             this.tabControl.Controls.Add(this.tabPageFaturaR);
             this.tabControl.Controls.Add(this.tabPageFaturaWS);
-            this.tabControl.Controls.Add(this.tabPageAlisMasraf);
-            this.tabControl.Controls.Add(this.tabPageSatisMasraf);
+            this.tabControl.Controls.Add(this.tabPageFaturaEP);
+            this.tabControl.Controls.Add(this.tabPageFaturaEXS);
             this.tabControl.Controls.Add(this.tabPageGelenHavale);
             this.tabControl.Controls.Add(this.tabPageGonderilenHavale);
             this.tabControl.Controls.Add(this.tabPageKrediKarti);
@@ -292,7 +292,7 @@ namespace V3ToLogo.UIL
             this.panel2.Controls.Add(this.label_malzeme_success);
             this.panel2.Controls.Add(this.label_malzeme_error);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.eFilterMalzeme);
+            this.panel2.Controls.Add(this.eFilterMalzemelog);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -365,12 +365,12 @@ namespace V3ToLogo.UIL
             this.button1.Text = "log sil";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // eFilterMalzeme
+            // eFilterMalzemelog
             // 
-            this.eFilterMalzeme.Location = new System.Drawing.Point(834, 19);
-            this.eFilterMalzeme.Name = "eFilterMalzeme";
-            this.eFilterMalzeme.Size = new System.Drawing.Size(157, 20);
-            this.eFilterMalzeme.TabIndex = 34;
+            this.eFilterMalzemelog.Location = new System.Drawing.Point(834, 19);
+            this.eFilterMalzemelog.Name = "eFilterMalzemelog";
+            this.eFilterMalzemelog.Size = new System.Drawing.Size(157, 20);
+            this.eFilterMalzemelog.TabIndex = 34;
             // 
             // tabPageCariHesap
             // 
@@ -401,7 +401,7 @@ namespace V3ToLogo.UIL
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.eFilterCariHesap);
+            this.panel3.Controls.Add(this.eFilterCariHesaplog);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.label_cari_error);
             this.panel3.Controls.Add(this.label_cari_success);
@@ -444,12 +444,12 @@ namespace V3ToLogo.UIL
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.ButtonRunClick);
             // 
-            // eFilterCariHesap
+            // eFilterCariHesaplog
             // 
-            this.eFilterCariHesap.Location = new System.Drawing.Point(658, 8);
-            this.eFilterCariHesap.Name = "eFilterCariHesap";
-            this.eFilterCariHesap.Size = new System.Drawing.Size(344, 20);
-            this.eFilterCariHesap.TabIndex = 43;
+            this.eFilterCariHesaplog.Location = new System.Drawing.Point(658, 8);
+            this.eFilterCariHesaplog.Name = "eFilterCariHesaplog";
+            this.eFilterCariHesaplog.Size = new System.Drawing.Size(344, 20);
+            this.eFilterCariHesaplog.TabIndex = 43;
             // 
             // button3
             // 
@@ -513,13 +513,13 @@ namespace V3ToLogo.UIL
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label13);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.eFilterFaturaBP);
             this.panel4.Controls.Add(this.checkBox3);
             this.panel4.Controls.Add(this.dt1_2);
             this.panel4.Controls.Add(this.checkBox4);
             this.panel4.Controls.Add(this.dt1_1);
             this.panel4.Controls.Add(this.button12);
-            this.panel4.Controls.Add(this.eFilterFaturaBP);
+            this.panel4.Controls.Add(this.eFilterFaturaBPlog);
             this.panel4.Controls.Add(this.label_faturaBP_success);
             this.panel4.Controls.Add(this.label_faturaBP_error);
             this.panel4.Controls.Add(this.button4);
@@ -556,12 +556,12 @@ namespace V3ToLogo.UIL
             this.label5.TabIndex = 52;
             this.label5.Text = "Fiş No";
             // 
-            // textBox3
+            // eFilterFaturaBP
             // 
-            this.textBox3.Location = new System.Drawing.Point(77, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(172, 20);
-            this.textBox3.TabIndex = 51;
+            this.eFilterFaturaBP.Location = new System.Drawing.Point(77, 64);
+            this.eFilterFaturaBP.Name = "eFilterFaturaBP";
+            this.eFilterFaturaBP.Size = new System.Drawing.Size(172, 20);
+            this.eFilterFaturaBP.TabIndex = 51;
             // 
             // checkBox3
             // 
@@ -619,12 +619,12 @@ namespace V3ToLogo.UIL
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.ButtonRunClick);
             // 
-            // eFilterFaturaBP
+            // eFilterFaturaBPlog
             // 
-            this.eFilterFaturaBP.Location = new System.Drawing.Point(728, 9);
-            this.eFilterFaturaBP.Name = "eFilterFaturaBP";
-            this.eFilterFaturaBP.Size = new System.Drawing.Size(344, 20);
-            this.eFilterFaturaBP.TabIndex = 44;
+            this.eFilterFaturaBPlog.Location = new System.Drawing.Point(728, 9);
+            this.eFilterFaturaBPlog.Name = "eFilterFaturaBPlog";
+            this.eFilterFaturaBPlog.Size = new System.Drawing.Size(344, 20);
+            this.eFilterFaturaBPlog.TabIndex = 44;
             // 
             // label_faturaBP_success
             // 
@@ -688,7 +688,7 @@ namespace V3ToLogo.UIL
             this.panelFaturaR.Controls.Add(this.label19);
             this.panelFaturaR.Controls.Add(this.label20);
             this.panelFaturaR.Controls.Add(this.label6);
-            this.panelFaturaR.Controls.Add(this.textBox4);
+            this.panelFaturaR.Controls.Add(this.eFilterFaturaR);
             this.panelFaturaR.Controls.Add(this.checkBox5);
             this.panelFaturaR.Controls.Add(this.dt2_2);
             this.panelFaturaR.Controls.Add(this.checkBox6);
@@ -697,7 +697,7 @@ namespace V3ToLogo.UIL
             this.panelFaturaR.Controls.Add(this.button6);
             this.panelFaturaR.Controls.Add(this.label_faturaR_success);
             this.panelFaturaR.Controls.Add(this.label_faturaR_error);
-            this.panelFaturaR.Controls.Add(this.eFilterFaturaR);
+            this.panelFaturaR.Controls.Add(this.eFilterFaturaRlog);
             this.panelFaturaR.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFaturaR.Location = new System.Drawing.Point(3, 3);
             this.panelFaturaR.Name = "panelFaturaR";
@@ -731,12 +731,12 @@ namespace V3ToLogo.UIL
             this.label6.TabIndex = 58;
             this.label6.Text = "Fiş No";
             // 
-            // textBox4
+            // eFilterFaturaR
             // 
-            this.textBox4.Location = new System.Drawing.Point(73, 67);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(172, 20);
-            this.textBox4.TabIndex = 57;
+            this.eFilterFaturaR.Location = new System.Drawing.Point(73, 67);
+            this.eFilterFaturaR.Name = "eFilterFaturaR";
+            this.eFilterFaturaR.Size = new System.Drawing.Size(172, 20);
+            this.eFilterFaturaR.TabIndex = 57;
             // 
             // checkBox5
             // 
@@ -827,12 +827,12 @@ namespace V3ToLogo.UIL
             this.label_faturaR_error.Text = "0";
             this.label_faturaR_error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // eFilterFaturaR
+            // eFilterFaturaRlog
             // 
-            this.eFilterFaturaR.Location = new System.Drawing.Point(785, 18);
-            this.eFilterFaturaR.Name = "eFilterFaturaR";
-            this.eFilterFaturaR.Size = new System.Drawing.Size(214, 20);
-            this.eFilterFaturaR.TabIndex = 39;
+            this.eFilterFaturaRlog.Location = new System.Drawing.Point(785, 18);
+            this.eFilterFaturaRlog.Name = "eFilterFaturaRlog";
+            this.eFilterFaturaRlog.Size = new System.Drawing.Size(214, 20);
+            this.eFilterFaturaRlog.TabIndex = 39;
             // 
             // tabPageFaturaWS
             // 
@@ -863,14 +863,14 @@ namespace V3ToLogo.UIL
             this.panel5.Controls.Add(this.label21);
             this.panel5.Controls.Add(this.label22);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.textBox5);
+            this.panel5.Controls.Add(this.eFilterFaturaWS);
             this.panel5.Controls.Add(this.checkBox7);
             this.panel5.Controls.Add(this.dt3_2);
             this.panel5.Controls.Add(this.checkBox8);
             this.panel5.Controls.Add(this.dt3_1);
             this.panel5.Controls.Add(this.button14);
             this.panel5.Controls.Add(this.button5);
-            this.panel5.Controls.Add(this.eFilterFaturaWS);
+            this.panel5.Controls.Add(this.eFilterFaturaWSlog);
             this.panel5.Controls.Add(this.label_faturaWS_success);
             this.panel5.Controls.Add(this.label_faturaWS_error);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -906,12 +906,12 @@ namespace V3ToLogo.UIL
             this.label7.TabIndex = 64;
             this.label7.Text = "Fiş No";
             // 
-            // textBox5
+            // eFilterFaturaWS
             // 
-            this.textBox5.Location = new System.Drawing.Point(74, 70);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(172, 20);
-            this.textBox5.TabIndex = 63;
+            this.eFilterFaturaWS.Location = new System.Drawing.Point(74, 70);
+            this.eFilterFaturaWS.Name = "eFilterFaturaWS";
+            this.eFilterFaturaWS.Size = new System.Drawing.Size(172, 20);
+            this.eFilterFaturaWS.TabIndex = 63;
             // 
             // checkBox7
             // 
@@ -978,12 +978,12 @@ namespace V3ToLogo.UIL
             this.button5.Text = "log sil";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // eFilterFaturaWS
+            // eFilterFaturaWSlog
             // 
-            this.eFilterFaturaWS.Location = new System.Drawing.Point(833, 21);
-            this.eFilterFaturaWS.Name = "eFilterFaturaWS";
-            this.eFilterFaturaWS.Size = new System.Drawing.Size(242, 20);
-            this.eFilterFaturaWS.TabIndex = 38;
+            this.eFilterFaturaWSlog.Location = new System.Drawing.Point(833, 21);
+            this.eFilterFaturaWSlog.Name = "eFilterFaturaWSlog";
+            this.eFilterFaturaWSlog.Size = new System.Drawing.Size(242, 20);
+            this.eFilterFaturaWSlog.TabIndex = 38;
             // 
             // label_faturaWS_success
             // 
@@ -1009,43 +1009,43 @@ namespace V3ToLogo.UIL
             this.label_faturaWS_error.Text = "0";
             this.label_faturaWS_error.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPageAlisMasraf
+            // tabPageFaturaEP
             // 
-            this.tabPageAlisMasraf.Controls.Add(this.dgvAlisMasraf);
-            this.tabPageAlisMasraf.Controls.Add(this.panel9);
-            this.tabPageAlisMasraf.Location = new System.Drawing.Point(4, 22);
-            this.tabPageAlisMasraf.Name = "tabPageAlisMasraf";
-            this.tabPageAlisMasraf.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAlisMasraf.Size = new System.Drawing.Size(1095, 607);
-            this.tabPageAlisMasraf.TabIndex = 6;
-            this.tabPageAlisMasraf.Text = "Alış Masraf Faturaları";
-            this.tabPageAlisMasraf.UseVisualStyleBackColor = true;
+            this.tabPageFaturaEP.Controls.Add(this.dgvFaturaEP);
+            this.tabPageFaturaEP.Controls.Add(this.panel9);
+            this.tabPageFaturaEP.Location = new System.Drawing.Point(4, 22);
+            this.tabPageFaturaEP.Name = "tabPageFaturaEP";
+            this.tabPageFaturaEP.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageFaturaEP.Size = new System.Drawing.Size(1095, 607);
+            this.tabPageFaturaEP.TabIndex = 6;
+            this.tabPageFaturaEP.Text = "Alış Masraf Faturaları";
+            this.tabPageFaturaEP.UseVisualStyleBackColor = true;
             // 
-            // dgvAlisMasraf
+            // dgvFaturaEP
             // 
-            this.dgvAlisMasraf.AllowUserToAddRows = false;
-            this.dgvAlisMasraf.AllowUserToDeleteRows = false;
-            this.dgvAlisMasraf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlisMasraf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAlisMasraf.Location = new System.Drawing.Point(3, 103);
-            this.dgvAlisMasraf.Name = "dgvAlisMasraf";
-            this.dgvAlisMasraf.ReadOnly = true;
-            this.dgvAlisMasraf.Size = new System.Drawing.Size(1089, 501);
-            this.dgvAlisMasraf.TabIndex = 50;
+            this.dgvFaturaEP.AllowUserToAddRows = false;
+            this.dgvFaturaEP.AllowUserToDeleteRows = false;
+            this.dgvFaturaEP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFaturaEP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFaturaEP.Location = new System.Drawing.Point(3, 103);
+            this.dgvFaturaEP.Name = "dgvFaturaEP";
+            this.dgvFaturaEP.ReadOnly = true;
+            this.dgvFaturaEP.Size = new System.Drawing.Size(1089, 501);
+            this.dgvFaturaEP.TabIndex = 50;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label23);
             this.panel9.Controls.Add(this.label24);
             this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.textBox6);
+            this.panel9.Controls.Add(this.eFilterFaturaEP);
             this.panel9.Controls.Add(this.checkBox9);
             this.panel9.Controls.Add(this.dt4_2);
             this.panel9.Controls.Add(this.checkBox10);
             this.panel9.Controls.Add(this.dt4_1);
             this.panel9.Controls.Add(this.button15);
             this.panel9.Controls.Add(this.button16);
-            this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.eFilterFaturaEPlog);
             this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.label2);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1081,12 +1081,12 @@ namespace V3ToLogo.UIL
             this.label8.TabIndex = 64;
             this.label8.Text = "Fiş No";
             // 
-            // textBox6
+            // eFilterFaturaEP
             // 
-            this.textBox6.Location = new System.Drawing.Point(73, 69);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(172, 20);
-            this.textBox6.TabIndex = 63;
+            this.eFilterFaturaEP.Location = new System.Drawing.Point(73, 69);
+            this.eFilterFaturaEP.Name = "eFilterFaturaEP";
+            this.eFilterFaturaEP.Size = new System.Drawing.Size(172, 20);
+            this.eFilterFaturaEP.TabIndex = 63;
             // 
             // checkBox9
             // 
@@ -1152,13 +1152,14 @@ namespace V3ToLogo.UIL
             this.button16.TabIndex = 34;
             this.button16.Text = "log sil";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
-            // textBox1
+            // eFilterFaturaEPlog
             // 
-            this.textBox1.Location = new System.Drawing.Point(819, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 20);
-            this.textBox1.TabIndex = 38;
+            this.eFilterFaturaEPlog.Location = new System.Drawing.Point(819, 16);
+            this.eFilterFaturaEPlog.Name = "eFilterFaturaEPlog";
+            this.eFilterFaturaEPlog.Size = new System.Drawing.Size(242, 20);
+            this.eFilterFaturaEPlog.TabIndex = 38;
             // 
             // label1
             // 
@@ -1184,43 +1185,43 @@ namespace V3ToLogo.UIL
             this.label2.Text = "0";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tabPageSatisMasraf
+            // tabPageFaturaEXS
             // 
-            this.tabPageSatisMasraf.Controls.Add(this.dgvSatisMasraf);
-            this.tabPageSatisMasraf.Controls.Add(this.panel10);
-            this.tabPageSatisMasraf.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSatisMasraf.Name = "tabPageSatisMasraf";
-            this.tabPageSatisMasraf.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSatisMasraf.Size = new System.Drawing.Size(1095, 607);
-            this.tabPageSatisMasraf.TabIndex = 7;
-            this.tabPageSatisMasraf.Text = "Satış Masraf Faturaları";
-            this.tabPageSatisMasraf.UseVisualStyleBackColor = true;
+            this.tabPageFaturaEXS.Controls.Add(this.dgvFaturaEXS);
+            this.tabPageFaturaEXS.Controls.Add(this.panel10);
+            this.tabPageFaturaEXS.Location = new System.Drawing.Point(4, 22);
+            this.tabPageFaturaEXS.Name = "tabPageFaturaEXS";
+            this.tabPageFaturaEXS.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageFaturaEXS.Size = new System.Drawing.Size(1095, 607);
+            this.tabPageFaturaEXS.TabIndex = 7;
+            this.tabPageFaturaEXS.Text = "Satış Masraf Faturaları";
+            this.tabPageFaturaEXS.UseVisualStyleBackColor = true;
             // 
-            // dgvSatisMasraf
+            // dgvFaturaEXS
             // 
-            this.dgvSatisMasraf.AllowUserToAddRows = false;
-            this.dgvSatisMasraf.AllowUserToDeleteRows = false;
-            this.dgvSatisMasraf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSatisMasraf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSatisMasraf.Location = new System.Drawing.Point(3, 103);
-            this.dgvSatisMasraf.Name = "dgvSatisMasraf";
-            this.dgvSatisMasraf.ReadOnly = true;
-            this.dgvSatisMasraf.Size = new System.Drawing.Size(1089, 501);
-            this.dgvSatisMasraf.TabIndex = 50;
+            this.dgvFaturaEXS.AllowUserToAddRows = false;
+            this.dgvFaturaEXS.AllowUserToDeleteRows = false;
+            this.dgvFaturaEXS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFaturaEXS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFaturaEXS.Location = new System.Drawing.Point(3, 103);
+            this.dgvFaturaEXS.Name = "dgvFaturaEXS";
+            this.dgvFaturaEXS.ReadOnly = true;
+            this.dgvFaturaEXS.Size = new System.Drawing.Size(1089, 501);
+            this.dgvFaturaEXS.TabIndex = 50;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.label25);
             this.panel10.Controls.Add(this.label26);
             this.panel10.Controls.Add(this.label9);
-            this.panel10.Controls.Add(this.textBox7);
+            this.panel10.Controls.Add(this.eFilterFaturaEXS);
             this.panel10.Controls.Add(this.checkBox11);
             this.panel10.Controls.Add(this.dt5_2);
             this.panel10.Controls.Add(this.checkBox12);
             this.panel10.Controls.Add(this.dt5_1);
             this.panel10.Controls.Add(this.button17);
             this.panel10.Controls.Add(this.button18);
-            this.panel10.Controls.Add(this.textBox2);
+            this.panel10.Controls.Add(this.eFilterFaturaEXSlog);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Controls.Add(this.label4);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1256,12 +1257,12 @@ namespace V3ToLogo.UIL
             this.label9.TabIndex = 64;
             this.label9.Text = "Fiş No";
             // 
-            // textBox7
+            // eFilterFaturaEXS
             // 
-            this.textBox7.Location = new System.Drawing.Point(76, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(172, 20);
-            this.textBox7.TabIndex = 63;
+            this.eFilterFaturaEXS.Location = new System.Drawing.Point(76, 66);
+            this.eFilterFaturaEXS.Name = "eFilterFaturaEXS";
+            this.eFilterFaturaEXS.Size = new System.Drawing.Size(172, 20);
+            this.eFilterFaturaEXS.TabIndex = 63;
             // 
             // checkBox11
             // 
@@ -1328,12 +1329,12 @@ namespace V3ToLogo.UIL
             this.button18.Text = "log sil";
             this.button18.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // eFilterFaturaEXSlog
             // 
-            this.textBox2.Location = new System.Drawing.Point(830, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 20);
-            this.textBox2.TabIndex = 38;
+            this.eFilterFaturaEXSlog.Location = new System.Drawing.Point(830, 16);
+            this.eFilterFaturaEXSlog.Name = "eFilterFaturaEXSlog";
+            this.eFilterFaturaEXSlog.Size = new System.Drawing.Size(242, 20);
+            this.eFilterFaturaEXSlog.TabIndex = 38;
             // 
             // label3
             // 
@@ -1388,7 +1389,7 @@ namespace V3ToLogo.UIL
             this.panel6.Controls.Add(this.label27);
             this.panel6.Controls.Add(this.label28);
             this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.textBox8);
+            this.panel6.Controls.Add(this.eFilterBankaGelenHavale);
             this.panel6.Controls.Add(this.checkBox13);
             this.panel6.Controls.Add(this.dt6_2);
             this.panel6.Controls.Add(this.checkBox14);
@@ -1397,7 +1398,7 @@ namespace V3ToLogo.UIL
             this.panel6.Controls.Add(this.button7);
             this.panel6.Controls.Add(this.label_gelenhavale_error);
             this.panel6.Controls.Add(this.label_gelenhavale_success);
-            this.panel6.Controls.Add(this.eFilterBankaGelenHavale);
+            this.panel6.Controls.Add(this.eFilterBankaGelenHavalelog);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
@@ -1431,12 +1432,12 @@ namespace V3ToLogo.UIL
             this.label10.TabIndex = 64;
             this.label10.Text = "Fiş No";
             // 
-            // textBox8
+            // eFilterBankaGelenHavale
             // 
-            this.textBox8.Location = new System.Drawing.Point(73, 65);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(172, 20);
-            this.textBox8.TabIndex = 63;
+            this.eFilterBankaGelenHavale.Location = new System.Drawing.Point(73, 65);
+            this.eFilterBankaGelenHavale.Name = "eFilterBankaGelenHavale";
+            this.eFilterBankaGelenHavale.Size = new System.Drawing.Size(172, 20);
+            this.eFilterBankaGelenHavale.TabIndex = 63;
             // 
             // checkBox13
             // 
@@ -1527,12 +1528,12 @@ namespace V3ToLogo.UIL
             this.label_gelenhavale_success.Text = "0";
             this.label_gelenhavale_success.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // eFilterBankaGelenHavale
+            // eFilterBankaGelenHavalelog
             // 
-            this.eFilterBankaGelenHavale.Location = new System.Drawing.Point(730, 9);
-            this.eFilterBankaGelenHavale.Name = "eFilterBankaGelenHavale";
-            this.eFilterBankaGelenHavale.Size = new System.Drawing.Size(344, 20);
-            this.eFilterBankaGelenHavale.TabIndex = 40;
+            this.eFilterBankaGelenHavalelog.Location = new System.Drawing.Point(730, 9);
+            this.eFilterBankaGelenHavalelog.Name = "eFilterBankaGelenHavalelog";
+            this.eFilterBankaGelenHavalelog.Size = new System.Drawing.Size(344, 20);
+            this.eFilterBankaGelenHavalelog.TabIndex = 40;
             // 
             // tabPageGonderilenHavale
             // 
@@ -1563,14 +1564,14 @@ namespace V3ToLogo.UIL
             this.panel7.Controls.Add(this.label29);
             this.panel7.Controls.Add(this.label30);
             this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.textBox9);
+            this.panel7.Controls.Add(this.eFilterBankaGonderilenHavale);
             this.panel7.Controls.Add(this.checkBox15);
             this.panel7.Controls.Add(this.dt7_2);
             this.panel7.Controls.Add(this.checkBox16);
             this.panel7.Controls.Add(this.dt7_1);
             this.panel7.Controls.Add(this.button20);
             this.panel7.Controls.Add(this.button8);
-            this.panel7.Controls.Add(this.eFilterBankaGonderilenHavale);
+            this.panel7.Controls.Add(this.eFilterBankaGonderilenHavalelog);
             this.panel7.Controls.Add(this.label_gonderilenhavale_success);
             this.panel7.Controls.Add(this.label_gonderilenhavale_error);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1606,12 +1607,12 @@ namespace V3ToLogo.UIL
             this.label11.TabIndex = 64;
             this.label11.Text = "Fiş No";
             // 
-            // textBox9
+            // eFilterBankaGonderilenHavale
             // 
-            this.textBox9.Location = new System.Drawing.Point(81, 64);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(172, 20);
-            this.textBox9.TabIndex = 63;
+            this.eFilterBankaGonderilenHavale.Location = new System.Drawing.Point(81, 64);
+            this.eFilterBankaGonderilenHavale.Name = "eFilterBankaGonderilenHavale";
+            this.eFilterBankaGonderilenHavale.Size = new System.Drawing.Size(172, 20);
+            this.eFilterBankaGonderilenHavale.TabIndex = 63;
             // 
             // checkBox15
             // 
@@ -1678,12 +1679,12 @@ namespace V3ToLogo.UIL
             this.button8.Text = "log sil";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // eFilterBankaGonderilenHavale
+            // eFilterBankaGonderilenHavalelog
             // 
-            this.eFilterBankaGonderilenHavale.Location = new System.Drawing.Point(723, 19);
-            this.eFilterBankaGonderilenHavale.Name = "eFilterBankaGonderilenHavale";
-            this.eFilterBankaGonderilenHavale.Size = new System.Drawing.Size(344, 20);
-            this.eFilterBankaGonderilenHavale.TabIndex = 43;
+            this.eFilterBankaGonderilenHavalelog.Location = new System.Drawing.Point(723, 19);
+            this.eFilterBankaGonderilenHavalelog.Name = "eFilterBankaGonderilenHavalelog";
+            this.eFilterBankaGonderilenHavalelog.Size = new System.Drawing.Size(344, 20);
+            this.eFilterBankaGonderilenHavalelog.TabIndex = 43;
             // 
             // label_gonderilenhavale_success
             // 
@@ -1738,14 +1739,14 @@ namespace V3ToLogo.UIL
             this.panel8.Controls.Add(this.label31);
             this.panel8.Controls.Add(this.label32);
             this.panel8.Controls.Add(this.label12);
-            this.panel8.Controls.Add(this.textBox10);
+            this.panel8.Controls.Add(this.eFilterKrediKartiFisi);
             this.panel8.Controls.Add(this.checkBox17);
             this.panel8.Controls.Add(this.dt8_2);
             this.panel8.Controls.Add(this.checkBox18);
             this.panel8.Controls.Add(this.dt8_1);
             this.panel8.Controls.Add(this.button21);
             this.panel8.Controls.Add(this.button9);
-            this.panel8.Controls.Add(this.eFilterKrediKartiFisi);
+            this.panel8.Controls.Add(this.eFilterKrediKartiFisilog);
             this.panel8.Controls.Add(this.label_kredikarti_success);
             this.panel8.Controls.Add(this.label_kredikarti_error);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1781,12 +1782,12 @@ namespace V3ToLogo.UIL
             this.label12.TabIndex = 64;
             this.label12.Text = "Fiş No";
             // 
-            // textBox10
+            // eFilterKrediKartiFisi
             // 
-            this.textBox10.Location = new System.Drawing.Point(76, 66);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(172, 20);
-            this.textBox10.TabIndex = 63;
+            this.eFilterKrediKartiFisi.Location = new System.Drawing.Point(76, 66);
+            this.eFilterKrediKartiFisi.Name = "eFilterKrediKartiFisi";
+            this.eFilterKrediKartiFisi.Size = new System.Drawing.Size(172, 20);
+            this.eFilterKrediKartiFisi.TabIndex = 63;
             // 
             // checkBox17
             // 
@@ -1852,13 +1853,14 @@ namespace V3ToLogo.UIL
             this.button9.TabIndex = 42;
             this.button9.Text = "log sil";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // eFilterKrediKartiFisi
+            // eFilterKrediKartiFisilog
             // 
-            this.eFilterKrediKartiFisi.Location = new System.Drawing.Point(824, 9);
-            this.eFilterKrediKartiFisi.Name = "eFilterKrediKartiFisi";
-            this.eFilterKrediKartiFisi.Size = new System.Drawing.Size(188, 20);
-            this.eFilterKrediKartiFisi.TabIndex = 44;
+            this.eFilterKrediKartiFisilog.Location = new System.Drawing.Point(824, 9);
+            this.eFilterKrediKartiFisilog.Name = "eFilterKrediKartiFisilog";
+            this.eFilterKrediKartiFisilog.Size = new System.Drawing.Size(188, 20);
+            this.eFilterKrediKartiFisilog.TabIndex = 44;
             // 
             // label_kredikarti_success
             // 
@@ -2067,12 +2069,12 @@ namespace V3ToLogo.UIL
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaturaWS)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.tabPageAlisMasraf.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAlisMasraf)).EndInit();
+            this.tabPageFaturaEP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFaturaEP)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.tabPageSatisMasraf.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSatisMasraf)).EndInit();
+            this.tabPageFaturaEXS.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFaturaEXS)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.tabPageGelenHavale.ResumeLayout(false);
@@ -2104,23 +2106,23 @@ namespace V3ToLogo.UIL
         private System.Windows.Forms.TabPage tabPageFaturaBP;
         private System.Windows.Forms.TabPage tabPageFaturaR;
         private System.Windows.Forms.TabPage tabPageFaturaWS;
-        private System.Windows.Forms.TabPage tabPageAlisMasraf;
-        private System.Windows.Forms.TabPage tabPageSatisMasraf;
+        private System.Windows.Forms.TabPage tabPageFaturaEP;
+        private System.Windows.Forms.TabPage tabPageFaturaEXS;
         private System.Windows.Forms.TabPage tabPageGelenHavale;
         private System.Windows.Forms.TabPage tabPageGonderilenHavale;
         private System.Windows.Forms.TabPage tabPageKrediKarti;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox eFilterMalzeme;
+        private System.Windows.Forms.TextBox eFilterMalzemelog;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label_malzeme_success;
         private System.Windows.Forms.Label label_malzeme_error;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox eFilterCariHesap;
+        private System.Windows.Forms.TextBox eFilterCariHesaplog;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label_cari_error;
         private System.Windows.Forms.Label label_cari_success;
-        private System.Windows.Forms.TextBox eFilterFaturaBP;
+        private System.Windows.Forms.TextBox eFilterFaturaBPlog;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label_faturaBP_success;
         private System.Windows.Forms.Label label_faturaBP_error;
@@ -2128,25 +2130,25 @@ namespace V3ToLogo.UIL
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label_faturaR_success;
         private System.Windows.Forms.Label label_faturaR_error;
-        private System.Windows.Forms.TextBox eFilterFaturaR;
+        private System.Windows.Forms.TextBox eFilterFaturaRlog;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox eFilterFaturaWS;
+        private System.Windows.Forms.TextBox eFilterFaturaWSlog;
         private System.Windows.Forms.Label label_faturaWS_success;
         private System.Windows.Forms.Label label_faturaWS_error;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label_gelenhavale_error;
         private System.Windows.Forms.Label label_gelenhavale_success;
-        private System.Windows.Forms.TextBox eFilterBankaGelenHavale;
+        private System.Windows.Forms.TextBox eFilterBankaGelenHavalelog;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox eFilterBankaGonderilenHavale;
+        private System.Windows.Forms.TextBox eFilterBankaGonderilenHavalelog;
         private System.Windows.Forms.Label label_gonderilenhavale_success;
         private System.Windows.Forms.Label label_gonderilenhavale_error;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox eFilterKrediKartiFisi;
+        private System.Windows.Forms.TextBox eFilterKrediKartiFisilog;
         private System.Windows.Forms.Label label_kredikarti_success;
         private System.Windows.Forms.Label label_kredikarti_error;
         private System.Windows.Forms.BindingSource spIvmeProductListBindingSource;
@@ -2164,8 +2166,8 @@ namespace V3ToLogo.UIL
         private System.Windows.Forms.DataGridView dgvGelenHavale;
         private System.Windows.Forms.DataGridView dgvGonderilenHavale;
         private System.Windows.Forms.DataGridView dgvKrediKarti;
-        private System.Windows.Forms.DataGridView dgvAlisMasraf;
-        private System.Windows.Forms.DataGridView dgvSatisMasraf;
+        private System.Windows.Forms.DataGridView dgvFaturaEP;
+        private System.Windows.Forms.DataGridView dgvFaturaEXS;
         private System.Windows.Forms.Panel panelFaturaR;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TabPage tabPageAyarlar;
@@ -2186,13 +2188,13 @@ namespace V3ToLogo.UIL
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox eFilterFaturaEPlog;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox eFilterFaturaEXSlog;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button19;
@@ -2203,45 +2205,45 @@ namespace V3ToLogo.UIL
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.DateTimePicker dt1_1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox eFilterFaturaBP;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox eFilterFaturaR;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.DateTimePicker dt2_2;
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.DateTimePicker dt2_1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox eFilterFaturaWS;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.DateTimePicker dt3_2;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.DateTimePicker dt3_1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox eFilterFaturaEP;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.DateTimePicker dt4_2;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.DateTimePicker dt4_1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox eFilterFaturaEXS;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.DateTimePicker dt5_2;
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.DateTimePicker dt5_1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox eFilterBankaGelenHavale;
         private System.Windows.Forms.CheckBox checkBox13;
         private System.Windows.Forms.DateTimePicker dt6_2;
         private System.Windows.Forms.CheckBox checkBox14;
         private System.Windows.Forms.DateTimePicker dt6_1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox eFilterBankaGonderilenHavale;
         private System.Windows.Forms.CheckBox checkBox15;
         private System.Windows.Forms.DateTimePicker dt7_2;
         private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.DateTimePicker dt7_1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox eFilterKrediKartiFisi;
         private System.Windows.Forms.CheckBox checkBox17;
         private System.Windows.Forms.DateTimePicker dt8_2;
         private System.Windows.Forms.CheckBox checkBox18;
@@ -2268,4 +2270,3 @@ namespace V3ToLogo.UIL
         private System.Windows.Forms.Label label32;
     }
 }
-

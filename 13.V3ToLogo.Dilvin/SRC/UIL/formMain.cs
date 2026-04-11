@@ -35,7 +35,7 @@ namespace V3ToLogo.UIL
             DataGridView[] grids = new DataGridView[]
             {
                 dgvCariHesap, dgvFaturaBP, dgvFaturaR, dgvFaturaWS,
-                dgvAlisMasraf, dgvSatisMasraf,
+                dgvFaturaEP, dgvFaturaEXS,
                 dgvGelenHavale, dgvGonderilenHavale, dgvKrediKarti
             };
             foreach (var dgv in grids)
@@ -226,7 +226,22 @@ namespace V3ToLogo.UIL
                         errMsg = await invoiceService.InvoiceTransfer("WS", formattedStartDate, formattedEndDate, eFilterFaturaWS.Text);
                         BindErrorGrid(dgvFaturaWS, invoiceService.ErrorList);
                     }
-
+                    if (IsActiveTab(tabPageFaturaEP))
+                    {
+                        string formattedStartDate = GetFormattedDate(checkBox10, dt4_1);
+                        string formattedEndDate = GetFormattedDate(checkBox9, dt4_2);
+                        invoiceService.ErrorList.Clear();
+                        errMsg = await invoiceService.InvoiceTransfer("EP", formattedStartDate, formattedEndDate, eFilterFaturaEP.Text);
+                        BindErrorGrid(dgvFaturaEP, invoiceService.ErrorList);
+                    }
+                    if (IsActiveTab(tabPageFaturaEXS))
+                    {
+                        string formattedStartDate = GetFormattedDate(checkBox12, dt5_1);
+                        string formattedEndDate = GetFormattedDate(checkBox11, dt5_2);
+                        invoiceService.ErrorList.Clear();
+                        errMsg = await invoiceService.InvoiceTransfer("EXS", formattedStartDate, formattedEndDate, eFilterFaturaEXS.Text);
+                        BindErrorGrid(dgvFaturaEXS, invoiceService.ErrorList);
+                    }
                     if (IsActiveTab(tabPageGelenHavale))
                     {
                         string formattedStartDate = GetFormattedDate(checkBox14, dt6_1);
@@ -276,13 +291,13 @@ namespace V3ToLogo.UIL
         private void button5_Click(object sender, EventArgs e)
         {
             BAL.GeneralBussines.Initialize();
-            if (eFilterFaturaWS.Text != "")
+            if (eFilterFaturaWSlog.Text != "")
             {
                 Application.EnableVisualStyles();
                 DialogResult result = MessageBox.Show("Kayıt aktarım logu silinecek. Emin misiniz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    int affected = InvoiceService.InvoiceNotTransferred("WS", eFilterFaturaWS.Text);
+                    int affected = InvoiceService.InvoiceNotTransferred("WS", eFilterFaturaWSlog.Text);
                     if (affected > 0) MessageBox.Show("Aktarım Logu Silindi");
                 }
             }
@@ -291,17 +306,26 @@ namespace V3ToLogo.UIL
         private void button3_Click(object sender, EventArgs e)
         {
             BAL.GeneralBussines.Initialize();
-            if (eFilterCariHesap.Text != "")
+            if (eFilterCariHesaplog.Text != "")
             {
                 Application.EnableVisualStyles();
                 DialogResult result = MessageBox.Show("Kayıt aktarım logu silinecek. Emin misiniz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    int affected = CustomerService.CustomerNotTransferred(eFilterCariHesap.Text);
+                    int affected = CustomerService.CustomerNotTransferred(eFilterCariHesaplog.Text);
                     if (affected > 0) MessageBox.Show("Aktarım Logu Silindi");
                 }
             }
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

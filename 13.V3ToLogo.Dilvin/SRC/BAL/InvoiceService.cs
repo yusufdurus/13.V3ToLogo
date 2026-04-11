@@ -184,6 +184,30 @@ namespace V3ToLogo.BAL
                                         trCode = InvoiceTypeEnum.ToptanSatis;
                                     }
                                     break;
+                                case "EP": // Satınalma Hizmet Faturası
+                                    vatIncluded = false;
+                                    if (isReturn)
+                                    {
+                                        trCode = InvoiceTypeEnum.SatinalmaIade;
+                                        slipNumber = log_invoiceRef; // iade faturalarında V3 de aynı fiş numarası 1den fazla olabiliyor. Bu durumda V3 deki uniq alan değeri fiş numarası olarak logoya aktarılacak.
+                                    }
+                                    else
+                                    {
+                                        trCode = InvoiceTypeEnum.AlinanHizmet;
+                                    }
+                                    break;
+                                case "EXS": // Satış Hizmet Faturası
+                                    vatIncluded = false;
+                                    if (isReturn)
+                                    {
+                                        trCode = InvoiceTypeEnum.ToptanSatisIade;
+                                        slipNumber = log_invoiceRef; // iade faturalarında V3 de aynı fiş numarası 1den fazla olabiliyor. Bu durumda V3 deki uniq alan değeri fiş numarası olarak logoya aktarılacak.
+                                    }
+                                    else
+                                    {
+                                        trCode = InvoiceTypeEnum.VerilenHizmet;
+                                    }
+                                    break;
                                 default:
                                     vatIncluded = true;
                                     if (isReturn)
@@ -277,7 +301,14 @@ namespace V3ToLogo.BAL
                                     break;
                                 case "BP": res = await client.CreatePurchInvoiceForV3ProjectAsync(sessionId, invoiceItem);
                                     break;
-                                case "WS": res = await client.CreateSaleInvoiceForV3ProjectAsync(sessionId, invoiceItem); 
+                                case "WS":
+                                    res = await client.CreateSaleInvoiceForV3ProjectAsync(sessionId, invoiceItem);
+                                    break;
+                                case "EXS":
+                                    res = await client.CreateSaleInvoiceForV3ProjectAsync(sessionId, invoiceItem);
+                                    break;
+                                case "EP":
+                                    res = await client.CreatePurchInvoiceForV3ProjectAsync(sessionId, invoiceItem);
                                     break;
                                 default: 
                                     break;
