@@ -72,6 +72,9 @@ namespace V3ToLogo.BAL
                 int ficheTypeInt;
                 switch (ficheType.Trim())
                 {
+                    case "virman":
+                        ficheTypeInt = 3;
+                        break;
                     case "gelenHavale":
                         ficheTypeInt = 4;
                         break;

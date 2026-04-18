@@ -194,6 +194,22 @@ namespace V3ToLogo.UIL
             this.buttonStop = new System.Windows.Forms.Button();
             this.buttonTimerList = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.tabPageBankaVirman = new System.Windows.Forms.TabPage();
+            this.gridVirman = new System.Windows.Forms.DataGridView();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.eFilterVirman = new System.Windows.Forms.TextBox();
+            this.cbVirman2 = new System.Windows.Forms.CheckBox();
+            this.dtVirman2 = new System.Windows.Forms.DateTimePicker();
+            this.cbVirman1 = new System.Windows.Forms.CheckBox();
+            this.dtVirman1 = new System.Windows.Forms.DateTimePicker();
+            this.button22 = new System.Windows.Forms.Button();
+            this.btnVirmanDeleteLog = new System.Windows.Forms.Button();
+            this.eLogVirman = new System.Windows.Forms.TextBox();
+            this.lblVirmanTransferSuccess = new System.Windows.Forms.Label();
+            this.lblVirmanTransferError = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageStok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -229,6 +245,9 @@ namespace V3ToLogo.UIL
             this.tabPageAyarlar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tabPageBankaVirman.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridVirman)).BeginInit();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // timerMain
@@ -252,14 +271,15 @@ namespace V3ToLogo.UIL
             this.tabControl.Controls.Add(this.tabPageFaturaEXS);
             this.tabControl.Controls.Add(this.tabPageGelenHavale);
             this.tabControl.Controls.Add(this.tabPageGonderilenHavale);
+            this.tabControl.Controls.Add(this.tabPageBankaVirman);
             this.tabControl.Controls.Add(this.tabPageKrediKarti);
             this.tabControl.Controls.Add(this.tabPageAyarlar);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1103, 633);
-            this.tabControl.TabIndex = 7;
+            this.tabControl.Size = new System.Drawing.Size(1293, 633);
+            this.tabControl.TabIndex = 6;
             // 
             // tabPageStok
             // 
@@ -268,7 +288,7 @@ namespace V3ToLogo.UIL
             this.tabPageStok.Location = new System.Drawing.Point(4, 22);
             this.tabPageStok.Name = "tabPageStok";
             this.tabPageStok.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStok.Size = new System.Drawing.Size(1095, 607);
+            this.tabPageStok.Size = new System.Drawing.Size(1285, 607);
             this.tabPageStok.TabIndex = 1;
             this.tabPageStok.Text = "Stok/Masraf Kartları";
             this.tabPageStok.UseVisualStyleBackColor = true;
@@ -281,7 +301,7 @@ namespace V3ToLogo.UIL
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 103);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1089, 501);
+            this.dataGridView1.Size = new System.Drawing.Size(1279, 501);
             this.dataGridView1.TabIndex = 34;
             // 
             // panel2
@@ -296,7 +316,7 @@ namespace V3ToLogo.UIL
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1089, 100);
+            this.panel2.Size = new System.Drawing.Size(1279, 100);
             this.panel2.TabIndex = 33;
             // 
             // label17
@@ -1542,7 +1562,7 @@ namespace V3ToLogo.UIL
             this.tabPageGonderilenHavale.Location = new System.Drawing.Point(4, 22);
             this.tabPageGonderilenHavale.Name = "tabPageGonderilenHavale";
             this.tabPageGonderilenHavale.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGonderilenHavale.Size = new System.Drawing.Size(1095, 607);
+            this.tabPageGonderilenHavale.Size = new System.Drawing.Size(1285, 607);
             this.tabPageGonderilenHavale.TabIndex = 9;
             this.tabPageGonderilenHavale.Text = "Gönderilen Havale";
             this.tabPageGonderilenHavale.UseVisualStyleBackColor = true;
@@ -1556,7 +1576,7 @@ namespace V3ToLogo.UIL
             this.dgvGonderilenHavale.Location = new System.Drawing.Point(3, 103);
             this.dgvGonderilenHavale.Name = "dgvGonderilenHavale";
             this.dgvGonderilenHavale.ReadOnly = true;
-            this.dgvGonderilenHavale.Size = new System.Drawing.Size(1089, 501);
+            this.dgvGonderilenHavale.Size = new System.Drawing.Size(1279, 501);
             this.dgvGonderilenHavale.TabIndex = 50;
             // 
             // panel7
@@ -1577,7 +1597,7 @@ namespace V3ToLogo.UIL
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1089, 100);
+            this.panel7.Size = new System.Drawing.Size(1279, 100);
             this.panel7.TabIndex = 0;
             // 
             // label29
@@ -2034,11 +2054,185 @@ namespace V3ToLogo.UIL
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
+            // tabPageBankaVirman
+            // 
+            this.tabPageBankaVirman.Controls.Add(this.gridVirman);
+            this.tabPageBankaVirman.Controls.Add(this.panel11);
+            this.tabPageBankaVirman.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBankaVirman.Name = "tabPageBankaVirman";
+            this.tabPageBankaVirman.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBankaVirman.Size = new System.Drawing.Size(1285, 607);
+            this.tabPageBankaVirman.TabIndex = 12;
+            this.tabPageBankaVirman.Text = "Banka Virman";
+            this.tabPageBankaVirman.UseVisualStyleBackColor = true;
+            // 
+            // gridVirman
+            // 
+            this.gridVirman.AllowUserToAddRows = false;
+            this.gridVirman.AllowUserToDeleteRows = false;
+            this.gridVirman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridVirman.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridVirman.Location = new System.Drawing.Point(3, 103);
+            this.gridVirman.Name = "gridVirman";
+            this.gridVirman.ReadOnly = true;
+            this.gridVirman.Size = new System.Drawing.Size(1279, 501);
+            this.gridVirman.TabIndex = 52;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label33);
+            this.panel11.Controls.Add(this.label34);
+            this.panel11.Controls.Add(this.label35);
+            this.panel11.Controls.Add(this.eFilterVirman);
+            this.panel11.Controls.Add(this.cbVirman2);
+            this.panel11.Controls.Add(this.dtVirman2);
+            this.panel11.Controls.Add(this.cbVirman1);
+            this.panel11.Controls.Add(this.dtVirman1);
+            this.panel11.Controls.Add(this.button22);
+            this.panel11.Controls.Add(this.btnVirmanDeleteLog);
+            this.panel11.Controls.Add(this.eLogVirman);
+            this.panel11.Controls.Add(this.lblVirmanTransferSuccess);
+            this.panel11.Controls.Add(this.lblVirmanTransferError);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1279, 100);
+            this.panel11.TabIndex = 51;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(600, 20);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(73, 13);
+            this.label33.TabIndex = 66;
+            this.label33.Text = "Aktarılamayan";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(460, 20);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(94, 13);
+            this.label34.TabIndex = 65;
+            this.label34.Text = "Toplam / Aktarılan";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(10, 64);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(37, 13);
+            this.label35.TabIndex = 64;
+            this.label35.Text = "Fiş No";
+            // 
+            // eFilterVirman
+            // 
+            this.eFilterVirman.Location = new System.Drawing.Point(81, 64);
+            this.eFilterVirman.Name = "eFilterVirman";
+            this.eFilterVirman.Size = new System.Drawing.Size(172, 20);
+            this.eFilterVirman.TabIndex = 63;
+            // 
+            // cbVirman2
+            // 
+            this.cbVirman2.AutoSize = true;
+            this.cbVirman2.Checked = true;
+            this.cbVirman2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbVirman2.Location = new System.Drawing.Point(13, 36);
+            this.cbVirman2.Name = "cbVirman2";
+            this.cbVirman2.Size = new System.Drawing.Size(45, 17);
+            this.cbVirman2.TabIndex = 62;
+            this.cbVirman2.Text = "Bitiş";
+            this.cbVirman2.UseVisualStyleBackColor = true;
+            // 
+            // dtVirman2
+            // 
+            this.dtVirman2.Location = new System.Drawing.Point(81, 38);
+            this.dtVirman2.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dtVirman2.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dtVirman2.Name = "dtVirman2";
+            this.dtVirman2.Size = new System.Drawing.Size(172, 20);
+            this.dtVirman2.TabIndex = 61;
+            // 
+            // cbVirman1
+            // 
+            this.cbVirman1.AutoSize = true;
+            this.cbVirman1.Checked = true;
+            this.cbVirman1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbVirman1.Location = new System.Drawing.Point(13, 13);
+            this.cbVirman1.Name = "cbVirman1";
+            this.cbVirman1.Size = new System.Drawing.Size(66, 17);
+            this.cbVirman1.TabIndex = 60;
+            this.cbVirman1.Text = "Başlama";
+            this.cbVirman1.UseVisualStyleBackColor = true;
+            // 
+            // dtVirman1
+            // 
+            this.dtVirman1.Location = new System.Drawing.Point(81, 12);
+            this.dtVirman1.MaxDate = new System.DateTime(2035, 12, 31, 0, 0, 0, 0);
+            this.dtVirman1.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.dtVirman1.Name = "dtVirman1";
+            this.dtVirman1.Size = new System.Drawing.Size(172, 20);
+            this.dtVirman1.TabIndex = 59;
+            // 
+            // button22
+            // 
+            this.button22.Image = global::V3ToLogo.Properties.Resources.control_play;
+            this.button22.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button22.Location = new System.Drawing.Point(258, 0);
+            this.button22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 2);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(173, 100);
+            this.button22.TabIndex = 48;
+            this.button22.Text = "Aktarımı Başlat";
+            this.button22.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button22.UseVisualStyleBackColor = true;
+            // 
+            // btnVirmanDeleteLog
+            // 
+            this.btnVirmanDeleteLog.Location = new System.Drawing.Point(1010, 54);
+            this.btnVirmanDeleteLog.Name = "btnVirmanDeleteLog";
+            this.btnVirmanDeleteLog.Size = new System.Drawing.Size(57, 23);
+            this.btnVirmanDeleteLog.TabIndex = 42;
+            this.btnVirmanDeleteLog.Text = "log sil";
+            this.btnVirmanDeleteLog.UseVisualStyleBackColor = true;
+            // 
+            // eLogVirman
+            // 
+            this.eLogVirman.Location = new System.Drawing.Point(723, 19);
+            this.eLogVirman.Name = "eLogVirman";
+            this.eLogVirman.Size = new System.Drawing.Size(344, 20);
+            this.eLogVirman.TabIndex = 43;
+            // 
+            // lblVirmanTransferSuccess
+            // 
+            this.lblVirmanTransferSuccess.AutoSize = true;
+            this.lblVirmanTransferSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblVirmanTransferSuccess.Location = new System.Drawing.Point(500, 40);
+            this.lblVirmanTransferSuccess.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVirmanTransferSuccess.Name = "lblVirmanTransferSuccess";
+            this.lblVirmanTransferSuccess.Size = new System.Drawing.Size(15, 16);
+            this.lblVirmanTransferSuccess.TabIndex = 40;
+            this.lblVirmanTransferSuccess.Text = "0";
+            this.lblVirmanTransferSuccess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblVirmanTransferError
+            // 
+            this.lblVirmanTransferError.AutoSize = true;
+            this.lblVirmanTransferError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblVirmanTransferError.Location = new System.Drawing.Point(640, 40);
+            this.lblVirmanTransferError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVirmanTransferError.Name = "lblVirmanTransferError";
+            this.lblVirmanTransferError.Size = new System.Drawing.Size(15, 16);
+            this.lblVirmanTransferError.TabIndex = 41;
+            this.lblVirmanTransferError.Text = "0";
+            this.lblVirmanTransferError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 633);
+            this.ClientSize = new System.Drawing.Size(1293, 633);
             this.Controls.Add(this.tabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -2093,6 +2287,10 @@ namespace V3ToLogo.UIL
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tabPageBankaVirman.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridVirman)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2268,5 +2466,21 @@ namespace V3ToLogo.UIL
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TabPage tabPageBankaVirman;
+        private System.Windows.Forms.DataGridView gridVirman;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox eFilterVirman;
+        private System.Windows.Forms.CheckBox cbVirman2;
+        private System.Windows.Forms.DateTimePicker dtVirman2;
+        private System.Windows.Forms.CheckBox cbVirman1;
+        private System.Windows.Forms.DateTimePicker dtVirman1;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button btnVirmanDeleteLog;
+        private System.Windows.Forms.TextBox eLogVirman;
+        private System.Windows.Forms.Label lblVirmanTransferSuccess;
+        private System.Windows.Forms.Label lblVirmanTransferError;
     }
 }

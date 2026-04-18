@@ -277,6 +277,7 @@ namespace V3ToLogo.BAL
                                 {
                                     InvoiceLine serviceLine = new InvoiceLine();
                                     serviceLine.Type = (int)InvoiceLineTypeEnum.ServiceLine;
+                                    serviceLine.LineTypeEnum = InvoiceLineTypeEnum.ServiceLine;
                                     serviceLine.Quantity = InvoiceLines[i].Quantity;
                                     serviceLine.Price = Convert.ToDouble(InvoiceLines[i].Price);
                                     serviceLine.CurrencyId = GetLogoCurrencyId(InvoiceLines[i].CurrencyCode);

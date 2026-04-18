@@ -260,6 +260,15 @@ namespace V3ToLogo.UIL
                         BindErrorGrid(dgvGonderilenHavale, bankService.ErrorList);
                     }
 
+                    if (IsActiveTab(tabPageBankaVirman))
+                    {
+                        string formattedStartDate = GetFormattedDate(cbVirman1, dtVirman1);
+                        string formattedEndDate = GetFormattedDate(cbVirman2, dtVirman2);
+                        bankService.ErrorList.Clear();
+                        errMsg = await bankService.BankFicheTransfer("virman", formattedStartDate, formattedEndDate, eFilterVirman.Text);
+                        BindErrorGrid(gridVirman, bankService.ErrorList);
+                    }
+
                     if (IsActiveTab(tabPageKrediKarti))
                     {
                         string formattedStartDate = GetFormattedDate(checkBox18, dt8_1);
