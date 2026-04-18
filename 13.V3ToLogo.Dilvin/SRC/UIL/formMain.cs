@@ -143,6 +143,13 @@ namespace V3ToLogo.UIL
                             + BankService.GetInstance().TransferCount_Success.ToString();
                         break;
                     }
+                case ActiveTransferType.Virman:
+                    {
+                        lblVirmanTransferError.Text = BankService.GetInstance().TransferCount_Error.ToString();
+                        lblVirmanTransferSuccess.Text = BankService.GetInstance().RecordCount.ToString() + " / "
+                            + BankService.GetInstance().TransferCount_Success.ToString();
+                        break;
+                    }
                 case ActiveTransferType.FaturaWS:
                     {
                         label_faturaWS_error.Text = InvoiceService.GetInstance().TransferCount_Error.ToString();

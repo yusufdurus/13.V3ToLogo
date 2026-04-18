@@ -17,7 +17,8 @@ namespace V3ToLogo.BAL
         FaturaR,
         Gelenhavale,
         Gonderilenhavale,
-        Kredikarti
+        Kredikarti,
+        Virman
     }
     public static class GeneralBussines
     {
