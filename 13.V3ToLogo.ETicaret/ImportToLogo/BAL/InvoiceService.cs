@@ -57,7 +57,13 @@ namespace ImportToLogo.BAL
                             invoiceItem.Date = masteritem.InvoiceDate;
 
                             if (masteritem.InvoiceType == "R")
-                                invoiceItem.CustomerCode = connectionSettings.LogoAccountCode;
+                            {
+                                if (masteritem.CustomerCode == "HICCUP")
+                                    invoiceItem.CustomerCode = "120.243";
+                                else 
+                                    invoiceItem.CustomerCode = connectionSettings.LogoAccountCode;
+                            }
+
                             else
                                 invoiceItem.CustomerCode = masteritem.CustomerCode;
 

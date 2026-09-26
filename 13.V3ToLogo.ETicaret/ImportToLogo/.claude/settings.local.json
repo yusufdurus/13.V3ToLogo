@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"e:/Work/Projects/Old/13.V3ToLogo/13.V3ToLogo.ETicaret\" && ls && echo \"--- packages ---\" && ls packages 2>/dev/null || echo \"NO packages folder\")",
+      "Read(//e/Work/Projects/Old/13.V3ToLogo/13.V3ToLogo.ETicaret/**)",
+      "Bash(cd \"e:/Work/Projects/Old/13.V3ToLogo/13.V3ToLogo.Dilvin\" && ls && echo \"--- SRC pkgs ---\" && cat SRC/packages.config 2>/dev/null && echo \"--- packages dir ---\" && ls packages 2>/dev/null || echo \"no packages\")",
+      "Read(//e/Work/Projects/Old/13.V3ToLogo/13.V3ToLogo.Dilvin/**)"
+    ]
+  }
+}
